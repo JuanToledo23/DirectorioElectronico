@@ -1,21 +1,23 @@
 <div class="contenedorHeader">
-  <div class="header linkRoot" style="padding-right: unset;" [routerLink]="['/filtrar']" (click)="regresaPrincipal()">
-    <img src="assets/img/icons/logo.svg" class="logo">
-  </div>
-  <mat-toolbar class="header" style="margin-left: -255px;">
-      <mat-toolbar-row class="row1">
-          <span class="example-spacer"></span>
-          <span class="user">{{datosGeneralesService.user}}</span>
-          <img src="assets/img/icons/logout.svg" class="logOut">
-      </mat-toolbar-row>
-  
-      <mat-toolbar-row class="spaceLetter row2">
-          <span></span>
-          <span class="example-spacer"></span>
-          <button mat-button *ngFor="let button of buttons" [routerLink]="[button.link]" (click)="buttonClick(button)" [class]="button.class">{{button.name}}</button>
-          <button mat-icon-button>
-              <mat-icon [routerLink]="['/resultados']">search</mat-icon>
-          </button>
-      </mat-toolbar-row>
-  </mat-toolbar>
+	<div class="header linkRoot" style="padding-right: unset;" [routerLink]="['/filtrar']" (click)="regresaPrincipal()">
+		<img src="assets/img/icons/logo.svg" class="logo">
+	</div>
+	<mat-toolbar class="header" style="margin-left: -255px;">
+		<mat-toolbar-row class="row1">
+			<span class="example-spacer"></span>
+			<span class="user">{{datosGeneralesService.user}}</span>
+			<img src="assets/img/icons/logout.svg" class="logOut">
+		</mat-toolbar-row>
+		<mat-toolbar-row class="spaceLetter row2">
+			<span></span>
+			<span class="example-spacer"></span>
+			<button mat-button *ngFor="let button of buttons" [routerLink]="[button.link]" (click)="buttonClick(button)" [class]="button.class">{{button.name}}</button>
+			<button class="icoBuscar" mat-icon-button>
+				<mat-icon (click)="mostrarBuscador = !mostrarBuscador">search</mat-icon>
+				<div class="buscador" *ngIf="mostrarBuscador">
+					<input type="text" (keyup.enter)="buscarResultado()" [(ngModel)]="valorBuscador" value="">
+				</div>
+			</button>
+		</mat-toolbar-row>
+	</mat-toolbar>
 </div>
