@@ -23,7 +23,7 @@
             </div>
             <div class="inputT">
                 Autoridad<br>
-                <input type="text">
+                <input type="text" (click)="openModalAutoridad()">
             </div>
             <div class="inputT">
                 Jefe<br>
@@ -40,24 +40,6 @@
                 <sat-datepicker #picker 
                 [rangeMode]="true"></sat-datepicker>
                 <sat-datepicker-toggle matSuffix [for]="picker"></sat-datepicker-toggle>
-            </div>
-
-            <div class="inputT">
-                Cargo<br>
-                <mat-select value='opcion1'>
-                    <mat-option value="opcion1">Opción 1</mat-option>
-                    <mat-option value="opcion2">Opción 2</mat-option>
-                </mat-select>
-            </div>
-            <div class="inputT">
-                Materia<br>
-                <div class="divFlexInputs">
-                    <div *ngFor="let materia of materias">
-                        <input type="checkbox" name="grupo1" [id]="materia.id" [(ngModel)]="materia.status"/>
-                        <label [for]="materia.id" class="check-box"></label>
-                        <label [for]="materia.id">{{materia.name}}</label>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="col3">
@@ -84,23 +66,27 @@
                 </div>
             </div>
             <div class="inputT">
-                Institución<br>
+                E-mail<br>
+                <input type="text" placeholder="correo@dominio.com.mx">
+            </div>
+            <div class="inputT">
+                Cargo<br>
                 <mat-select value='opcion1'>
                     <mat-option value="opcion1">Opción 1</mat-option>
                     <mat-option value="opcion2">Opción 2</mat-option>
                 </mat-select>
             </div>
-            <div class="inputT">
-                Domicilio laboral<br>
-                <input type="text">
-            </div>
-            <div class="inputT">
-                Último grado<br>
-                <input type="text">
-            </div>
-            <div class="inputT">
-                e-mail<br>
-                <input type="text">
+            <div class="inputT datepickRange">
+                Inicio de cargo<br>
+                
+                <!-- <input matInput
+                    placeholder="Selecciona una fecha"
+                    [satDatepicker]="picker"
+                    readonly
+                    >
+                <sat-datepicker #picker 
+                [rangeMode]="true"></sat-datepicker>
+                <sat-datepicker-toggle matSuffix [for]="picker"></sat-datepicker-toggle> -->
             </div>
         </div>
     </div>
@@ -137,7 +123,7 @@
                 <sat-datepicker-toggle matSuffix [for]="picker1"></sat-datepicker-toggle>
             </div>
             <div class="col3">
-                Institución<br>
+                Autoridad<br>
                 <select>
                     <option>Opción 1</option>
                 </select>
