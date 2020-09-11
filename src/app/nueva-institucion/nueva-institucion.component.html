@@ -1,5 +1,5 @@
 <div class="divWrapper">
-    <div class="tituloPrincipal">NUEVA INSTITUCIÓN</div>
+    <div class="tituloPrincipal">NUEVA AUTORIDAD</div>
     <div class="divCol2 divInstitucion">
         <div class="col2 pRelative">
             <div class="divImgFuncionario">
@@ -12,17 +12,17 @@
         <div class="col2">
         <div class="divCol2">
             <div class="col2">
-                Nombre de la Institución<br>
+                Nombre de la Autoridad<br>
                 <input type="text">
             </div>
             <div class="col2">
-                Institución Padre<br>
+                Autoridad Padre<br>
                 <input type="text">
             </div>
             <div class="col2">
                 Materia<br>
-                <div class="divFlexInputs">
-                    <div *ngFor="let materia of materias">
+                <div class="divCol3Check">
+                    <div *ngFor="let materia of materias" class="col3Check">
                         <input type="checkbox" name="grupo1" [id]="materia.id" [(ngModel)]="materia.status"/>
                         <label [for]="materia.id" class="check-box"></label>
                         <label [for]="materia.id">{{materia.name}}</label>
@@ -30,14 +30,14 @@
                 </div>
             </div>
             <div class="col2">
-                Domicilio de la Institución<br>
+                Domicilio de la Autoridad<br>
                 <input type="text">
             </div>
         </div>
         </div>
     </div>
     <br>
-    <div class="tituloPrincipal">DATOS DE LA INSTITUCIÓN</div>
+    <div class="tituloPrincipal">DATOS DE LA AUTORIDAD</div>
     <div class="divCol3">
         <div class="col3">
             <div class="inputT">

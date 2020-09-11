@@ -30,6 +30,7 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { EditarContactoComponent } from './editar-contacto/editar-contacto.component';
 import { InstitucionAgregarRama } from './institucion/modales/institucionAgregarRama';
 import { AutoridadModal } from './nuevo-funcionario/modales/autoridadModal';
+import { AutoridadGuardarCambios } from './editar-institucion/modales/autoridadGuardarCambios';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { AutoridadModal } from './nuevo-funcionario/modales/autoridadModal';
     EditarCargoComponent,
     CargoGuardarCambioDialog,
     AutoridadModal,
+    AutoridadGuardarCambios,
     evaluacionComentarios,
     evaluar,
     FuncionarioGuardarCambios,
@@ -77,6 +79,7 @@ import { AutoridadModal } from './nuevo-funcionario/modales/autoridadModal';
   entryComponents: [
     CargoGuardarCambioDialog,
     AutoridadModal,
+    AutoridadGuardarCambios,
     evaluacionComentarios,
     evaluar,
     FuncionarioGuardarCambios,

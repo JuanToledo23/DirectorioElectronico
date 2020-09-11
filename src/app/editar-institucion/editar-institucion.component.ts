@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material';
+import { AutoridadGuardarCambios } from './modales/autoridadGuardarCambios';
 
 @Component({
   selector: 'app-editar-institucion',
@@ -15,7 +17,7 @@ export class EditarInstitucionComponent implements OnInit {
     this.isShow = !this.isShow;
   }
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
   }
@@ -24,4 +26,14 @@ export class EditarInstitucionComponent implements OnInit {
     {id: 1, name: 'Civil', status:true, active:true},
     {id: 2, name: 'Fiscal', status:true, active:true}
   ];
+
+  guardarCambios() {
+    const dialogRef = this.dialog.open(AutoridadGuardarCambios, {
+      width: '600px'
+    });
+    dialogRef.afterClosed().subscribe(result => {
+    });
+    console.log(dialogRef);
+}
+
 }

@@ -68,7 +68,7 @@ export class DatosGeneralesService {
   nodeSelected: any;
   nodesInstituciones = [
     {
-      name: 'Ministro Presidente - Arturo Zaldívar Lelo de Larrea 0',
+      name: 'Suprema Corte de Justicia de la Nación',
       children: [
         {name: 'Secretaría General de Acuerdos'},
         {
@@ -88,7 +88,7 @@ export class DatosGeneralesService {
       parent: true
     },
     {
-      name: 'Ministro Presidente - Arturo Zaldívar Lelo de Larrea 1',
+      name: 'Suprema Corte de Justicia de la Nación',
       children: [
         {name: 'Secretaría General de Acuerdos'},
         {
@@ -107,7 +107,7 @@ export class DatosGeneralesService {
       parent: true
     },
     {
-      name: 'Ministro Presidente - Arturo Zaldívar Lelo de Larrea 1',
+      name: 'Suprema Corte de Justicia de la Nación',
       children: [
         {name: 'Secretaría General de Acuerdos'},
         {
@@ -121,6 +121,62 @@ export class DatosGeneralesService {
         {name: 'Tercera sala de la Suprema Corte de Jsuticia de la Nación'},
         {name: 'Cuarta sala de la Suprema Corte de Jsuticia de la Nación'},
         {name: 'Cuarta sala de la Suprema Corte de Jsuticia de la Nación'},
+      ],
+      focused: false,
+      parent: true
+    },
+  ];
+  nodesEstructuraOrganica = [
+    {
+      name: 'Ministro Presidente - Arturo Zaldívar Lelo de Larrea',
+      children: [
+        {
+          name: 'Ministra - Ana Margarita Ríos',
+          children: [
+            {name: 'Ministro - José Fernández'},
+            {name: 'Ministro - José Fernández'},
+            {name: 'Ministro - José Fernández'},
+          ]
+        },
+        {name: 'Ministro - Jorge Mario Pardo'},
+        {name: 'Ministro - Jorge Mario Pardo'},
+        {name: 'Ministro - Jorge Mario Pardo'},
+      ],
+      focused: false,
+      parent: true
+    },
+    {
+      name: 'Ministro Presidente - Arturo Zaldívar Lelo de Larrea',
+      children: [
+        {
+          name: 'Ministra - Ana Margarita Ríos',
+          children: [
+            {name: 'Ministro - José Fernández'},
+            {name: 'Ministro - José Fernández'},
+            {name: 'Ministro - José Fernández'},
+          ]
+        },
+        {name: 'Ministro - Jorge Mario Pardo'},
+        {name: 'Ministro - Jorge Mario Pardo'},
+        {name: 'Ministro - Jorge Mario Pardo'},
+      ],
+      focused: false,
+      parent: true
+    },
+    {
+      name: 'Ministro Presidente - Arturo Zaldívar Lelo de Larrea',
+      children: [
+        {
+          name: 'Ministra - Ana Margarita Ríos',
+          children: [
+            {name: 'Ministro - José Fernández'},
+            {name: 'Ministro - José Fernández'},
+            {name: 'Ministro - José Fernández'},
+          ]
+        },
+        {name: 'Ministro - Jorge Mario Pardo'},
+        {name: 'Ministro - Jorge Mario Pardo'},
+        {name: 'Ministro - Jorge Mario Pardo'},
       ],
       focused: false,
       parent: true

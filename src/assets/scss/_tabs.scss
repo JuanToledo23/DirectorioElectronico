@@ -8,6 +8,7 @@
     background-color: unset !important;
     margin-bottom: -1px;
     border-radius: 6px 6px 0px 0px;
+    // min-width: 215px;
 }
 
 .mat-tab-header {
@@ -42,8 +43,8 @@
     border-radius: 6px 6px 0px 0px;
     height: 30px !important;
     opacity: unset !important;
-    min-width: 100px !important;
-    padding: 0 12px !important;
+    min-width: 110px !important;
+    padding: 0 6px !important;
 }
 
 .mat-tab-label-active > .mat-tab-label-content{
