@@ -47,9 +47,9 @@ export class HeaderComponent implements OnInit {
 
 	buscarResultado(){
 		if(this.valorBuscador != ''){
-			this.router.navigate(['/resultados']);
 			this.valorBuscador = '';
 			this.mostrarBuscador = false;
+			this.router.navigate(['/resultados']);
 		}
 	}
 }
