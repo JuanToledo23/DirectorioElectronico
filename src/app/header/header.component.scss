@@ -60,6 +60,19 @@
     background: unset !important;
 }
 
+.icoBuscar{
+    position: relative;
+}
+
+.buscador{
+    position: absolute;
+    right: 0;
+
+    input{
+        width: 14rem;
+    }
+}
+
 @media screen and (max-width:900px){
     // .mat-button {
     //     padding: 0 6px;
