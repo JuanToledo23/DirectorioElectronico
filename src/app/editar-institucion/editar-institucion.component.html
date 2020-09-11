@@ -11,8 +11,8 @@
             <!-- [color]="color" -->
         </mat-slide-toggle>
     </div>
+    <div class="mensajeInactivo" *ngIf="isShow"><span class="dot"></span>Institución Inactiva desde 01/12/2016</div>
     <div [ngClass]="{inactiva: isShow}">
-        <div class="mensajeInactivo"><span class="dot"></span></div>
         <div class="divCol2 divInstitucion">
             <div class="col2 pRelative">
                 <div class="divImgFuncionario">
