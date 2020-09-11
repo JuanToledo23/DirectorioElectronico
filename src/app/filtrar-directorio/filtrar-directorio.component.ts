@@ -417,6 +417,7 @@ export class FiltrarDirectorioComponent implements OnInit {
     {name: 'Ejecutivo', column: 4, status: false},
     {name: 'Legislativo', column: 4, status: false},
     {name: 'Órganos Constitucionales Autónomos', column: 4, status: false},
+    {name: 'Independiente', column: 4, status: false},
   ];
   materia = [
     {name: 'Civil', column: 5, status: false},
