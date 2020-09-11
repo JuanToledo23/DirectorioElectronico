@@ -5,7 +5,8 @@ input[type="password"],
 select,
 .dk-selected,
 input[type="time"],
-input[type="search"] {
+input[type="search"],
+mat-form-field {
   background-color: #fff;
   color: #2e2925;
   border: 0px;

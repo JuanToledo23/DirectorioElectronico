@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
 
   buttons = [
     {link: '/nuevoFuncionario', name: 'NUEVO FUNCIONARIO', class: 'mat-button mat-button-base'},
-    {link: '/nuevaInstitucion', name: 'NUEVA INSTITUCIÓN', class: 'mat-button mat-button-base'},
+    {link: '/nuevaInstitucion', name: 'NUEVA AUTORIDAD', class: 'mat-button mat-button-base'},
     {link: '/nuevoContacto', name: 'NUEVO CONTACTO', class: 'mat-button mat-button-base'},
   ];
 

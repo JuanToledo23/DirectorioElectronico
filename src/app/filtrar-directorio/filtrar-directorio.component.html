@@ -55,7 +55,7 @@
                 </div>
             </div>
         </mat-tab>
-        <mat-tab label="Institución">
+        <mat-tab label="Autoridad">
             <div class="divFuncionario">
                 <div class="divChecks">
 
@@ -126,7 +126,7 @@
                 <tr>
                     <th>Funcionario</th>
                     <th>Cargo</th>
-                    <th>Institución</th>
+                    <th>Autoridad</th>
                     <th>Nivel de gobierno</th>
                     <th>Poder</th>
                     <th>Materia</th>
@@ -154,7 +154,7 @@
 </div>
 
 <div class="contenedorFiltrado" *ngIf="!contentShowTab">
-    <div class="tituloPrincipal">INSTITUCIONES</div>
+    <div class="tituloPrincipal">AUTORIDADES</div>
 
     <mat-chip-list #chipList>
         <mat-chip *ngFor="let criterio of criteriosBusquedaChips" [removable]="removable" (removed)="remove(criterio)">

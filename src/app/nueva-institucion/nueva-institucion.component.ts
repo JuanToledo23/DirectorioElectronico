@@ -9,33 +9,29 @@ import { DatosGeneralesService } from '../services/datos-generales.service';
 })
 export class NuevaInstitucionComponent implements OnInit {
   materias = [
-    {id: 1, name: 'Civil', estatus:'false'},
-    {id: 2, name: 'Administrativo', estatus:'false'},
-    {id: 3, name: 'Competencia económica', estatus:'false'},
-    {id: 4, name: 'Fiscal', estatus:'false'},
-    {id: 5, name: 'Laboral', estatus:'false'}
+    { id: 1, name: 'Civil', estatus: 'false' },
+    { id: 2, name: 'Administrativo', estatus: 'false' },
+    { id: 3, name: 'Competencia económica', estatus: 'false' },
+    { id: 4, name: 'Fiscal', estatus: 'false' },
+    { id: 5, name: 'Laboral', estatus: 'false' },
+    { id: 6, name: 'Penal', estatus: 'false' },
+    { id: 7, name: 'Electoral', estatus: 'false' }
   ];
 
   constructor(public router: Router, public datosGeneralesService: DatosGeneralesService) { }
 
   stopNode = this.datosGeneralesService.nodeSelected;
   ngOnInit() {
-    // console.log(this.router.getCurrentNavigation().extras.state)
-    // console.log(this.datosGeneralesService.nodeSelected);
-    // console.log(Object.keys(this.datosGeneralesService.nodesInstituciones[0]));
     this.datosGeneralesService.nodesInstituciones.filter(topParent => {
       console.log(topParent);
       if (topParent.children) {
-         
+
       }
     });
   }
 
   getParent() {
     this.datosGeneralesService.nodesInstituciones.forEach(topParent => {
-      // if (topParent.children) {
-         
-      // }
     });
   }
 

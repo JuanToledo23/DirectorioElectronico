@@ -12,6 +12,29 @@
   width: 31%;
   margin: 10px 1%;
 }
+
+.divCol3Check {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.divCol3Check .col3Check {
+  width: 26%;
+  margin: 10px 1%;
+  white-space: nowrap;
+}
+
+.divCol4 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.divCol4 .col4 {
+  width: 31%;
+}
+
 .divImgFuncionario {
 //   width: 100%;
   border: 1px solid #000;
@@ -116,7 +139,7 @@ textarea.comentarios {
   background-color: white;
   padding: 40px 100px;
   box-sizing: border-box;
-  height: 100%;
+  height: 1100px;
 }
 
 .divCol2, .divInstitucion {

@@ -11,9 +11,37 @@
         </div>
         <div class="col3">
             <div class="inputT">
-                Nombre(s)<br>
+                Grado de estudios<br>
+                <mat-select value='opcion1'>
+                    <mat-option value="opcion1">Licenciatura</mat-option>
+                    <mat-option value="opcion2">Mestria</mat-option>
+                </mat-select>
+            </div>
+            <div class="inputT">
+                Contacto laboral (móvil)<br>
                 <input type="text">
             </div>
+            <div class="inputT">
+                Autoridad<br>
+                <input type="text">
+            </div>
+            <div class="inputT">
+                Jefe<br>
+                <input type="text">
+            </div>
+            <div class="inputT datepickRange">
+                Fin de cargo<br>
+                
+                <input matInput
+                    placeholder="Selecciona una fecha"
+                    [satDatepicker]="picker"
+                    readonly
+                    >
+                <sat-datepicker #picker 
+                [rangeMode]="true"></sat-datepicker>
+                <sat-datepicker-toggle matSuffix [for]="picker"></sat-datepicker-toggle>
+            </div>
+
             <div class="inputT">
                 Cargo<br>
                 <mat-select value='opcion1'>
@@ -31,35 +59,36 @@
                     </div>
                 </div>
             </div>
-            <div class="inputT">
-                Jefe<br>
-                <input type="text">
-            </div>
-            <div class="inputT">
-                Contacto laboral (móvil)<br>
-                <input type="text">
-            </div>
         </div>
         <div class="col3">
+            <div class="inputT">
+                <div class="divCol3">
+                    <div class="col3">
+                        <div class="inputT">
+                            Nombre (s)<br>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="col3">
+                        <div class="inputT">
+                            Apellido paterno<br>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="col3">
+                        <div class="inputT">
+                            Apellido materno<br>
+                            <input type="text">
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="inputT">
                 Institución<br>
                 <mat-select value='opcion1'>
                     <mat-option value="opcion1">Opción 1</mat-option>
                     <mat-option value="opcion2">Opción 2</mat-option>
                 </mat-select>
-            </div>
-            <div class="inputT datepickRange">
-                Periodo<br>
-                
-                <input matInput
-                    placeholder="Selecciona una fecha"
-                    [satDatepicker]="picker"
-                    readonly
-                    >
-                <sat-datepicker #picker 
-                [rangeMode]="true"></sat-datepicker>
-                <sat-datepicker-toggle matSuffix [for]="picker"></sat-datepicker-toggle>
-              
             </div>
             <div class="inputT">
                 Domicilio laboral<br>

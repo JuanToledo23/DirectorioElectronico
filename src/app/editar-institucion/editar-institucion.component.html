@@ -1,7 +1,7 @@
 <div class="divWrapper pRelative">
-    <div class="tituloPrincipal">INSTITUCIÓN <br> <span>SUPREMA CORTE DE JUSTICIA DE LA NACIÓN</span></div>
+    <div class="tituloPrincipal">AUTORIDAD <br> <span>SUPREMA CORTE DE JUSTICIA DE LA NACIÓN</span></div>
     <div class="divSwitch divAbsolute">
-        <b [hidden]= "isShow">Institución activa</b>
+        <b [hidden]= "isShow">Autoridad activa</b>
         <mat-slide-toggle
             class="switchC"
             [checked]="checked"
@@ -19,18 +19,18 @@
                 </div>
                 <div class="botonCargar">
                     <input type="file" id="inputNuevaImagen" class="carga">
-                    <label for="inputNuevaImagen"><span>Adjuntat documento</span></label>
+                    <label for="inputNuevaImagen"><span>Adjuntar documento</span></label>
                 </div>
             </div>
         </div>
         <div class="col2">
             <div class="divCol2">
                 <div class="col2">
-                    Nombre de la Institución<br>
+                    Nombre de la Autoridad<br>
                     <input type="text">
                 </div>
                 <div class="col2">
-                    Institución Padre<br>
+                    Autoridad Padre<br>
                     <input type="text">
                 </div>
                 <div class="col2">
@@ -44,13 +44,13 @@
                     </div>
                 </div>
                 <div class="col2">
-                    Domicilio de la Institución<br>
+                    Domicilio de la Autoridad<br>
                     <input type="text">
                 </div>
             </div>
         </div>
     </div>
-    <div class="tituloPrincipal">DATOS DE LA INSTITUCIÓN</div>
+    <div class="tituloPrincipal">DATOS DE LA ATORIDAD</div>
     <div class="divCol3 divDatosInstitucion">
         <div class="col3">
             <div class="inputT">
@@ -99,6 +99,6 @@
     </div>
     <div class="btnCenter">
         <button mat-button class="botonPrimario">Regresar</button>
-        <button mat-button routerLink="/editarInstitucion" class="botonPrimario">Editar Institución</button>
+        <button mat-button class="botonPrimario" (click)="guardarCambios()">Guardar</button>
     </div>
 </div>
