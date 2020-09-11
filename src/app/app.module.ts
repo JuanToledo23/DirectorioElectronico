@@ -31,7 +31,8 @@ import { EditarContactoComponent } from './editar-contacto/editar-contacto.compo
 import { InstitucionAgregarRama } from './institucion/modales/institucionAgregarRama';
 import { AutoridadModal } from './nuevo-funcionario/modales/autoridadModal';
 import { AutoridadGuardarCambios } from './editar-institucion/modales/autoridadGuardarCambios';
-
+import { EducacionModal } from './nuevo-funcionario/modales/educacionModal.component';
+import { DragDropComponent } from './drag-drop/dragDrop.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,9 @@ import { AutoridadGuardarCambios } from './editar-institucion/modales/autoridadG
     EditarFuncionarioComponent,
     ResultadoBusquedaComponent,
     ContactoComponent,
-    EditarContactoComponent
+    EditarContactoComponent,
+    EducacionModal,
+    DragDropComponent
   ],
   imports: [
     BrowserModule,
@@ -84,6 +87,7 @@ import { AutoridadGuardarCambios } from './editar-institucion/modales/autoridadG
     evaluar,
     FuncionarioGuardarCambios,
     InstitucionAgregarRama,
+    EducacionModal
   ],
   bootstrap: [AppComponent]
 })
