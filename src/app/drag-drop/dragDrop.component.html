@@ -1,3 +1,15 @@
-<div>
-    DragDrop
+<div class="dragDrop">
+    <input class="dragDrop__input" type="file" name="files[]" (change)="cargarArchivo($event)" multiple draggable #file>
+    <ng-container *ngIf="archivos.documentos.length > 0">
+        <div class="dragDrop-archivo" *ngFor="let archivo of archivos.documentos;let i = index;">
+            <div class="dragDrop-archivo__titulo">
+                <label>{{ (archivo.name && archivo.name.length > 10) ? (archivo.name.trim() | slice:0:20) + '...' : archivo.name }}</label>
+                <img (click)="eliminarArchivo(i)" src="assets/img/icons/tache.png" alt="imgTache ">
+            </div>
+            <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+        </div>
+    </ng-container>
+    <div class="dragDrop__etiqueta" *ngIf="archivos.documentos.length == 0">
+        Arrastre y suelte sus archivos aquí<br>para adjuntarlos
+    </div>
 </div>

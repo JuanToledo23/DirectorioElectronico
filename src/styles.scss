@@ -416,3 +416,80 @@ span.mat-expansion-indicator::after {
         width: 100%;
     }
 }
+
+.mat-progress-bar{
+    border-radius: 4px;
+    height: 6px!important;
+}
+
+.mat-progress-bar-fill::after {
+    background-color: #02a8a0!important;
+}
+
+.mat-progress-bar-buffer {
+    background-color: #fcfcfcfc;
+}
+
+.datePick{
+    position: relative!important;
+
+    .mat-button, .mat-flat-button, .mat-icon-button, .mat-stroked-button {
+        min-width: unset !important;
+        padding: unset !important;
+        position: absolute;
+        right: -5px;
+        top: -1px;
+    }
+}
+
+.mat-calendar{
+    font-family: "Avenir_Next_Regular" !important;
+}
+
+.mat-calendar-body-selected {
+    background-color: #02a8a0 !important;
+    color: #fff;
+}
+
+.mat-datepicker-toggle{
+    position: absolute;
+    top: 18px;
+    right: 0px;
+}
+
+.mat-datepicker-toggle-active {
+    color: #02a8a0 !important;
+}
+
+input.mat-input-element {
+    margin-top: 3px!important;
+}
+
+.matInputCustom {
+    background-color: #fff;
+    color: #2e2925;
+    border: 0px;
+    padding: 0px;
+    border-radius: 0px;
+    position: relative;
+    font-size: 11px;
+    padding: 0px 10px;
+    height: 29px;
+    width: 100%;
+    border: 1px solid #bfbfbf;
+    outline: none;
+
+    &::placeholder{
+        color: #2e2925!important;
+    }
+}
+
+.mat-year-picker .mat-calendar-controls{
+    .mat-calendar-arrow{
+        display: none;
+    }
+    
+    .mat-calendar-period-button{
+        pointer-events: none;
+    }
+}

@@ -1,3 +1,13 @@
 <div>
+    <div class="datePick">
+        Fecha de compra: <br>
+        <input matInput [matDatepicker]="picker" class="matInputCustom" [(ngModel)]="fecha" (click)="picker.open()" placeholder="Seleccione la fecha de compra" >
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>  
+        <mat-datepicker #picker>
+        </mat-datepicker>
+    </div>
+
+    <br><br>
+    
     <drag-drop-directorio></drag-drop-directorio>
 </div>

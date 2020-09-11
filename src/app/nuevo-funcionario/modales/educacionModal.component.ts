@@ -4,6 +4,9 @@ import { Component } from '@angular/core'
     templateUrl: './educacionModal.component.html'
 })
 export class EducacionModal {
+
+    public fecha = null;
+    
     constructor(){
         
     }
