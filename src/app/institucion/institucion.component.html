@@ -1,0 +1,87 @@
+<div class="divWrapper">
+    <div class="tituloPrincipal">NUEVA INSTITUCION <br> <span>SUPREMA CORTE DE JUSTICIA DE LA NACIÓN</span></div>
+    <div class="divCol2">
+        <div class="w30 ImagenInstitucion">
+            <img src="../../assets/img/institucion.png">
+        </div>
+        <div class="w70">
+            <div class="infoInstitucion"><span>Institución</span><br> Suprema Corte de Justicia de la Nación</div>
+            <div class="infoInstitucion"><span>Institución Padre</span><br> Suprema Corte de Justicia de la Nación</div>
+            <div class="infoInstitucion"><span>Domicilio de la institución</span><br>Pino Suárez No. 2 Col. Centro, Del. Cuauhtémoc, C.P 06065, México, Ciudad de México</div>
+        </div>
+    </div>
+    <div class="tabsInstitucion">
+        <mat-tab-group>
+            <mat-tab label="Funcionario">
+                <div class="divTabla">
+                    <table id="registroI" class="tblGeneral">
+                        <thead>
+                            <tr>
+                                <th>País</th>
+                                <th>Estado</th>
+                                <th>Municipio/Delegación</th>
+                                <th>Nivel de Gobierno</th>
+                                <th>Poder</th>
+                                <th>Materia</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let institucion of datosGeneralesService.instituciones">
+                                <td>{{institucion.pais}}</td>
+                                <td>{{institucion.estado}}</td>
+                                <td>{{institucion.municipio}}</td>
+                                <td>{{institucion.nivelGobierno}}</td>
+                                <td>{{institucion.poder}}</td>
+                                <td>{{institucion.materia}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tituloPrincipal">DESCRIPCIÓN</div>
+                <div class="textoDescripcion">
+                        La Suprema Corte de Justicia de la Nación es el Máximo Tribunal Constitucional del país y cabeza del Poder Judicial de la Federación. Tiene entre sus responsabilidades defender el orden establecido por la Constitución Política de los Estados Unidos Mexicanos; mantener el equilibrio entre los distintos Poderes y ámbitos de gobierno, a través de las resoluciones judiciales que emite; además de solucionar, de manera definitiva, asuntos que son de gran importancia para la sociedad. En esa virtud, y toda vez que imparte justicia en el más alto nivel, es decir, el constitucional, no existe en nuestro país autoridad que se encuentre por encima de ella o recurso legal que pueda ejercerse en contra de sus resoluciones.
+                        <br><br>
+                        El edificio sede de la Suprema Corte de Justicia de la Nación se encuentra ubicado en Avenida Pino Suárez número 2, Colonia Centro Histórico, Delegación Cuauhtémoc, C.P. 06065, en la Ciudad de México.
+                        <br><br>
+                        Sin embargo, en el año de 2002, se determinó establecer como sede alterna para el desarrollo de las sesiones del Alto Tribunal, el edificio ubicado en Avenida Revolución número 1508, Colonia Guadalupe Inn, Delegación Álvaro Obregón, C.P. 01020, en la Ciudad de México.
+                </div>
+                <div class="btnCenter">
+                    <button mat-button class="botonPrimario">Regresar</button>
+                    <button mat-button routerLink="/editarInstitucion" class="botonPrimario">Editar Institución</button>
+                </div>
+            </mat-tab>
+            <mat-tab label="Estructura Orgánica">
+                <div class="tree" style="position: relative;">
+                    <div class="flex">
+                        <div class="textBuscar">
+                        Buscar:
+                            <div class="pRelative">
+                                  <input type="text" style="box-sizing: border-box;" [(ngModel)]="filter" (keyup)="filterTree()">
+                            </div>
+                        </div>
+                    </div>
+                    <tree-root #tree [nodes]="datosGeneralesService.nodesInstituciones" [options]="options" (activate)="onEvent($event)">
+                        <ng-template #treeNodeTemplate let-node let-index="index">
+                            <div style="display: flex;justify-content: space-between;width: 100%;" [ngClass]="{'childrenBackground': node.isFocused, 'parentBackground': node.data.focused}">
+                                <div class="textCenter">{{ node.data.name }}</div>
+                                <div *ngIf="node.isFocused || node.data.focused">
+                                    <button mat-icon-button (click)="agregarRamaDialog()">
+                                        <img src="assets/img/icons/agregar.svg">
+                                    </button>
+                                    <button mat-icon-button>
+                                        <img src="assets/img/icons/eliminar.svg">
+                                    </button>
+                                </div>
+                            </div>
+                          </ng-template>
+                    </tree-root>
+                </div>
+                
+            </mat-tab> 
+            
+            <mat-tab label="Subinstituciones">
+            </mat-tab>
+        </mat-tab-group>
+        
+    </div>
+</div>

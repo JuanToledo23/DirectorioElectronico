@@ -1,0 +1,32 @@
+<div class="modalWrapper">
+    <!-- <div class="btnCerrar">
+        <img src="assets/img/icons/cerrar.svg" (click)="onNoClick()">
+    </div> -->
+    <div class="tituloModal">EVALUAR</div>
+    <div class="evaluacionEstrellas">
+        <div *ngFor="let star of stars" 
+        class="contenedorStar"
+        (click)="seleccionarCantidadEstrellas(star.id)" 
+        (mouseover)="seleccionarEstrellas(star.id)" 
+        (mouseleave)="regresarEstrellaSeleccionadas()">
+            <svg [ngClass]="{'selected': star.status}"
+            width="30px" height="30px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path class="star" d="M21.98061,8.08421311 C21.9341425,7.93976665 21.8108855,7.83442449 21.6624258,7.8124782 L14.538724,6.76344581 L11.3529446,0.22265503 C11.2867875,0.086189044 11.1497478,-4.38760139e-13 11.0001068,-4.38760139e-13 C10.8504657,-4.38760139e-13 10.7130322,0.086189044 10.6472689,0.22265503 L7.46109578,6.76384484 L0.337393898,7.81287723 C0.188934218,7.83482351 0.0660710344,7.93976665 0.0192097562,8.08461213 C-0.0268639376,8.22865956 0.0113339111,8.38747085 0.118839197,8.49321204 L5.2739736,13.58475 L4.05676174,20.7743528 C4.03155904,20.9239865 4.09220304,21.0752164 4.21309726,21.1645976 C4.33477907,21.2547769 4.4958401,21.2663486 4.62776051,21.1949234 L11.0001068,17.8008307 L17.3716654,21.1949234 C17.4291591,21.2256482 17.4925597,21.2408111 17.5551726,21.2408111 C17.6366876,21.2408111 17.7178088,21.2152736 17.7867225,21.1645976 C17.9080105,21.0752164 17.9686545,20.9239865 17.943058,20.7743528 L16.7262399,13.585149 L21.8813743,8.49321204 C21.9884858,8.38667281 22.0270775,8.22826054 21.98061,8.08421311 Z" id="star"></path>
+            </svg>
+        </div>
+    </div>
+
+    <div class="contenidoComentarios" style="height: 150px; margin-bottom: 15px;">
+        <div class="boxComentario">
+            <div class="tittleBlue"> 
+                <div>Comentarios</div>
+           
+            </div>
+            <div class="comentario">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit ipsa mollitia sed? Rem fugiat voluptatem blanditiis tempora reprehenderit tenetur perferendis ratione praesentium. Id incidunt voluptates enim at dicta maxime illo!</div>    
+        </div>
+    </div>
+    <div class="btnCenter">
+        <button mat-button [mat-dialog-close]="false" class="botonPrimario">Cancelar</button>
+        <button mat-button [mat-dialog-close]="true" class="botonPrimario">Aceptar</button>
+    </div>
+</div>

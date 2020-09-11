@@ -1,0 +1,200 @@
+<div class="contenedorFuncionario">
+    <div class="tituloPrincipal">FUNCIONARIO</div>
+    <div class="nombreFuncionario">{{funcionarioActivo.nombre}}</div>
+    <div class="flex">
+        <div class="tarjeta">
+            <img src="assets/img/funcionario.png" alt="">
+            <div class="black">
+                <div (click)="openModalEvaluacionComentarios()">
+                    <div class="starTittle">
+                        <div>4.67</div>
+                        <div class="contenedorEstrellas">
+                            <div *ngFor="let star of datosGeneralesService.stars" 
+                            class="contenedorStar" style="cursor: unset;">
+                                <svg [ngClass]="{'estrellaMarcada': star.status}" fill="white"
+                                width="25px" height="25px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs *ngIf="star.esDecimal">
+                                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop [attr.offset]="datosGeneralesService.valorDecimal" style="stop-color:#fed65d;stop-opacity:1" />
+                                            <stop [attr.offset]="datosGeneralesService.valorDecimal" style="stop-color:white;stop-opacity:1" />
+                                        </linearGradient>
+                                    </defs>
+                                    <path [ngClass]="{'fillDecimal': star.esDecimal}" d="M21.98061,8.08421311 C21.9341425,7.93976665 21.8108855,7.83442449 21.6624258,7.8124782 L14.538724,6.76344581 L11.3529446,0.22265503 C11.2867875,0.086189044 11.1497478,-4.38760139e-13 11.0001068,-4.38760139e-13 C10.8504657,-4.38760139e-13 10.7130322,0.086189044 10.6472689,0.22265503 L7.46109578,6.76384484 L0.337393898,7.81287723 C0.188934218,7.83482351 0.0660710344,7.93976665 0.0192097562,8.08461213 C-0.0268639376,8.22865956 0.0113339111,8.38747085 0.118839197,8.49321204 L5.2739736,13.58475 L4.05676174,20.7743528 C4.03155904,20.9239865 4.09220304,21.0752164 4.21309726,21.1645976 C4.33477907,21.2547769 4.4958401,21.2663486 4.62776051,21.1949234 L11.0001068,17.8008307 L17.3716654,21.1949234 C17.4291591,21.2256482 17.4925597,21.2408111 17.5551726,21.2408111 C17.6366876,21.2408111 17.7178088,21.2152736 17.7867225,21.1645976 C17.9080105,21.0752164 17.9686545,20.9239865 17.943058,20.7743528 L16.7262399,13.585149 L21.8813743,8.49321204 C21.9884858,8.38667281 22.0270775,8.22826054 21.98061,8.08421311 Z" id="star"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="btn" (click)="openModalEvaluar()">Evaluar</a>
+            </div>
+        </div>
+        <div class="cv">
+        <div class="cvTitulo">
+            Ministro presidente de la suprema corte de justicia de la nación <img src="assets/img/icons/ver.svg" alt="">
+            <br>
+            (02/01/2019)
+        </div>
+
+        <div class="cvData">
+
+            <div>
+            <span>Institución</span> <br>
+            {{funcionarioActivo.institucion}}
+            </div>
+
+            <div>
+            <span>Jefe</span> <br>
+            Sin dependencia
+            </div>
+
+            <div>
+            <span>Último grado</span> <br>
+            Doctorado en Derecho
+            </div>
+
+            <div>
+            <span>Contacto laboral</span> <br>
+            Movil: 55-9933-9933 <br>
+            e-mail: correo@dominio.com.mx
+            </div>
+
+            <div>
+            <span>Domicilio laboral</span> <br>
+            Pino Suárez No. 2 Col. Centro, Del. Cuauhtémoc, C.P. 06065, México, Ciudad de México
+            </div>
+
+        </div>
+        </div>
+
+        <div></div>
+    </div>
+    <mat-tab-group (selectedTabChange)="prueba($event)">
+        <mat-tab label="Funcionario">
+            <div class="descripcion">
+                Abogado egresado de la Escuela Libre de Derecho. Doctor en Derecho por la Universidad Nacional Autónoma de México (UNAM). Durante 25 años fue abogado postulante en materia constitucional y combinó su actividad con la vida académica.
+                <br><br>
+                Ha sido profesor de derecho constitucional en la Escuela Libre de Derecho, así como profesor a nivel posgrado en la misma institución, de materias relacionadas con el derecho constitucional y el derecho procesal constitucional. También fue profesor titular en las maestrías de derecho procesal constitucional y derecho constitucional y derechos humanos en la Universidad Panamericana. Por oposición, obtuvo la cátedra de derecho constitucional en la UNAM.
+                <br><br>
+                Actualmente, imparte el Seminario de Análisis de la doctrina jurisprudencial de la Suprema Corte en la Universidad Iberoamericana, campus Santa Fe.
+                <br><br>
+                Ha impartido cursos y conferencias en diversas instituciones de educación superior de México y de Iberoamérica, asimismo, ha participado como ponente en numerosos congresos internacionales.
+                <br><br>
+                Es autor del libro Hacia una nueva ley de Amparo (Editorial Porrúa), y de diversos ensayos y artículos publicados en libros colectivos y revistas especializadas, así como de diversas obras colectivas de carácter internacional, entre las que figura la coordinación, junto con Eduardo Ferrer Mc-Gregor, de la obra La ciencia del derecho procesal constitucional. Estudios en homenaje a Héctor Fix Zamudio en sus cincuenta años como investigador del derecho (obra de doce tomos, en la cual se contienen ensayos de 400 juristas de 37 países, publicada en 12 países).
+                <br><br>
+                Durante su ejercicio como abogado postulante, integró diversas organizaciones entre las que destacan: el Instituto Mexicano de Derecho Procesal Constitucional, el Instituto Iberoamericano de Derecho Constitucional, el Consejo Asesor de la Maestría en Derecho Constitucional y Derechos Humanos en la Universidad Panamericana, el Consejo Asesor de la Licenciatura en Derecho del Centro de Investigación y Docencia Económicas, el Consejo Asesor del Anuario Iberoamericano de Justicia Constitucional, el Comité Técnico de la revista Reforma Judicial Revista Mexicana de Justicia, el Consejo Honorario de la revista La Judicatura, editada por el Supremo Tribunal de Justicia del Estado de Sonora; así como de la Barra Mexicana-Colegio de Abogados A.C., de la cual renunció posteriormente a su designación, por considerar que era incompatible con su desempeño como ministro. Durante ese tiempo, presidió la Comisión de Derecho Constitucional y Amparo entre 1998 y 2003.
+                <br><br>
+                También, fue integrante de la Comisión Redactora del Proyecto de Nueva Ley de Amparo, creada por acuerdo del Pleno de la Suprema Corte de Justicia de la Nación, del Consejo Asesor de la Maestría en Derecho Administrativo y de la Regulación en el Instituto Tecnológico Autónomo de México y de los comités académicos del Instituto de la Judicatura Federal y del Tribunal Electoral del Poder Judicial de la Federación.
+                <br><br>
+                En su labor jurisdiccional ha impulsado criterios garantistas, entre los que destacan: asuntos sobre el derecho a la libertad de expresión relacionados con el derecho al honor, a la intimidad y la no discriminación; sobre el derecho a la igualdad y no discriminación, destacan los relacionados con la no discriminación en anuncios de trabajo, los efectos horizontales de los derechos en materia de personas con discapacidad, el modelo social de discapacidad en casos de interdicción, y el desarrollo de principios para determinar responsabilidad de casos de Bullying; sobre el libre desarrollo de la personalidad ha propuesto criterios sobre la inconstitucionalidad de las causales de divorcio o el uso lúdico de la marihuana; respecto de los derechos de los niños, destacan los parámetros para la efectividad de los derechos a ser escuchados y participar en procedimientos judiciales, así como estándares para los procesos sobre menores víctimas de abuso sexual y víctimas de delitos de violación y secuestro; con respecto al derecho al debido proceso, ha propuesto criterios para la efectividad del principio de presunción de inocencia como estándar de prueba, como regla probatoria y como regla de trato; en materia de igualdad de género, destacan criterios sobre la obligatoriedad para todos los jueces y juezas de juzgar con perspectiva de género, el desarrollo de parámetros para la pensión compensatoria y el reconocimiento de la doble jornada, así como la posibilidad del reclamo de una indemnización moral por violencia doméstica; asimismo, destaca la sentencia sobre regulación de publicidad oficial y procedencia del amparo contra omisiones legislativas.
+            </div>
+        </mat-tab>
+        <mat-tab label="Educación"> 
+            <div class="trayectoria">
+
+                <div class="trayectoriaItem">
+                    <div><b>Dorctorado en Derecho Público</b></div>
+                    <div>1987 - 1990</div>
+                    <div>Universidad de Paris</div>
+                    <div>Mención honorifica con la tesis: "El nuevo rol del Estado frente al Sector Público. La desincorporación de entidades paraestatales"</div>
+                </div>
+
+                <div class="trayectoriaItem">
+                    <div><b>Maestría en Derecho Publico</b></div>
+                    <div>1985 - 1987</div>
+                    <div>Universidad de Paris</div>
+                    <div>Tesís: "El control de la empresa pública en Francia: El caso de la Régie Renault"</div>
+                </div>
+
+                <div class="trayectoriaItem">
+                    <div><b>Maestría en Administración Fiscal</b></div>
+                    <div>1987 - 1989</div>
+                    <div>Universidad de Paris</div>
+                    <div>Tesís: "El contencioso fiscal en México"</div>
+                </div>
+
+                <div class="trayectoriaItem">
+                    <div><b>Diplomado en Administración Pública</b></div>
+                    <div>1985 - 1986</div>
+                    <div>Instituto Internacional de la Administración Pública, Páris, Francia.</div>
+                </div>
+
+                <div class="trayectoriaItem">
+                    <div><b>Licenciatura en Derecho</b></div>
+                    <div>1978 - 1981</div>
+                    <div>Universidad Regiomontana</div>
+                    <div>Tesis: "La reforma administrativa en México y sus etapas de implementación"</div>
+                </div>
+
+            </div>    
+        </mat-tab>
+        <mat-tab label="Trayectoria profesional"> 
+            <div class="trayectoria">
+
+                <div class="trayectoriaItem">
+                    <div><b>Dorctorado en Derecho Público</b></div>
+                    <div>1987 - 1990</div>
+                    <div>Universidad de Paris</div>
+                    <div>Mención honorifica con la tesis: "El nuevo rol del Estado frente al Sector Público. La desincorporación de entidades paraestatales"</div>
+                </div>
+
+                <div class="trayectoriaItem">
+                    <div><b>Maestría en Derecho Publico</b></div>
+                    <div>1985 - 1987</div>
+                    <div>Universidad de Paris</div>
+                    <div>Tesís: "El control de la empresa pública en Francia: El caso de la Régie Renault"</div>
+                </div>
+
+                <div class="trayectoriaItem">
+                    <div><b>Maestría en Administración Fiscal</b></div>
+                    <div>1987 - 1989</div>
+                    <div>Universidad de Paris</div>
+                    <div>Tesís: "El contencioso fiscal en México"</div>
+                </div>
+
+                <div class="trayectoriaItem">
+                    <div><b>Diplomado en Administración Pública</b></div>
+                    <div>1985 - 1986</div>
+                    <div>Instituto Internacional de la Administración Pública, Páris, Francia.</div>
+                </div>
+
+                <div class="trayectoriaItem">
+                    <div><b>Licenciatura en Derecho</b></div>
+                    <div>1978 - 1981</div>
+                    <div>Universidad Regiomontana</div>
+                    <div>Tesis: "La reforma administrativa en México y sus etapas de implementación"</div>
+                </div>
+
+            </div>     
+        </mat-tab>
+        <mat-tab label="Contactos"> 
+            <div class="divTabla">
+                <table id="registroContactos" class="tblPaginador tblGeneral">
+                    <thead>
+                        <tr>
+                            <th><img src="assets/img/icons/star.svg" alt=""></th>
+                            <th>Nombre</th>
+                            <th>Teléfono</th>
+                            <th>Correo Electrónico</th>
+                            <th>Enlace</th>
+                            <th>Eliminar de la lista</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let contacto of datosGeneralesService.contactos">
+                            <td>{{contacto.estrella}}</td>
+                            <td>{{contacto.nombre}}</td>
+                            <td>{{contacto.telefono}}</td>
+                            <td>{{contacto.correo}}</td>
+                            <td>{{contacto.enlace}}</td>
+                            <td><img src="assets/img/icons/ver.svg" alt="" class="verContactos" [routerLink]="['/contacto']"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+    <div class="btnCenter">
+        <button mat-button class="botonPrimario">Regresar</button>
+        <button mat-button class="botonPrimario" [routerLink]="['/editarFuncionario', id]">Editar perfil</button>
+    </div>
+</div>

@@ -1,0 +1,180 @@
+<div class="divWrapper">
+    <div class="tituloPrincipal">NUEVO FUNCIONARIO</div>
+    <div class="divCol3">
+        <div class="col3 pRelative">
+            <div class="divImgFuncionario">
+                <div class="imgFuncionario"></div>
+                <div class="divCargarImagen">
+                    <div class="botonCargar"><a href="#"><img src="assets/img/icons/subirFoto.svg"></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="col3">
+            <div class="inputT">
+                Nombre(s)<br>
+                <input type="text">
+            </div>
+            <div class="inputT">
+                Cargo<br>
+                <mat-select value='opcion1'>
+                    <mat-option value="opcion1">Opción 1</mat-option>
+                    <mat-option value="opcion2">Opción 2</mat-option>
+                </mat-select>
+            </div>
+            <div class="inputT">
+                Materia<br>
+                <div class="divFlexInputs">
+                    <div *ngFor="let materia of materias">
+                        <input type="checkbox" name="grupo1" [id]="materia.id" [(ngModel)]="materia.status"/>
+                        <label [for]="materia.id" class="check-box"></label>
+                        <label [for]="materia.id">{{materia.name}}</label>
+                    </div>
+                </div>
+            </div>
+            <div class="inputT">
+                Jefe<br>
+                <input type="text">
+            </div>
+            <div class="inputT">
+                Contacto laboral (móvil)<br>
+                <input type="text">
+            </div>
+        </div>
+        <div class="col3">
+            <div class="inputT">
+                Institución<br>
+                <mat-select value='opcion1'>
+                    <mat-option value="opcion1">Opción 1</mat-option>
+                    <mat-option value="opcion2">Opción 2</mat-option>
+                </mat-select>
+            </div>
+            <div class="inputT datepickRange">
+                Periodo<br>
+                
+                <input matInput
+                    placeholder="Selecciona una fecha"
+                    [satDatepicker]="picker"
+                    readonly
+                    >
+                <sat-datepicker #picker 
+                [rangeMode]="true"></sat-datepicker>
+                <sat-datepicker-toggle matSuffix [for]="picker"></sat-datepicker-toggle>
+              
+            </div>
+            <div class="inputT">
+                Domicilio laboral<br>
+                <input type="text">
+            </div>
+            <div class="inputT">
+                Último grado<br>
+                <input type="text">
+            </div>
+            <div class="inputT">
+                e-mail<br>
+                <input type="text">
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="tituloPrincipal">FUNCIONARIO</div>
+    <div class="w100">
+        <textarea></textarea>
+    </div>
+    <br>
+    <div class="divEducacion">
+        <div class="tituloPrincipal">EDUCACIÓN</div>
+        <div class="w100 pRelative editorComentarios">
+            <div class="divListado">
+                <div class="iconosEdicion">
+                    <a href="#"><img src="assets/img/icons/editar.svg"></a>
+                    <a href="#"><img src="assets/img/icons/eliminar.svg"></a>
+                </div>
+            </div>
+        </div>
+        <div class="divCol3">
+            <div class="col3">
+                Título<br>
+                <input type="text">
+            </div>
+            <div class="col3">
+                Periodo<br>
+                <input matInput
+                    placeholder="Selecciona una fecha"
+                    [satDatepicker]="picker1"
+                    readonly
+                    >
+                <sat-datepicker #picker1 
+                [rangeMode]="true"></sat-datepicker>
+                <sat-datepicker-toggle matSuffix [for]="picker1"></sat-datepicker-toggle>
+            </div>
+            <div class="col3">
+                Institución<br>
+                <select>
+                    <option>Opción 1</option>
+                </select>
+            </div>
+        </div>
+        <div class="w100">
+            Comentarios:<br>
+            <textarea class="comentarios"></textarea>
+        </div>
+        <div class="botonAgregar"><a href="#"><div></div> Agregar</a></div>
+    </div>
+    <br>
+    <div class="divTrayectoria">
+        <div class="tituloPrincipal">TRAYECTORIA PROFESIONAL</div>
+        <div class="w100 pRelative editorComentarios">
+            <div class="divListado"></div>
+        </div>
+        <div class="divCol3">
+            <div class="col3">
+                Cargo<br>
+                <input type="text">
+            </div>
+            <div class="col3">
+                Periodo<br>
+                <input type="text">
+            </div>
+            <div class="col3">
+                Institución<br>
+                <select>
+                    <option>Opción 1</option>
+                </select>
+            </div>
+        </div>
+        <div class="botonAgregar"><a href="#"><div></div> Agregar</a></div>
+    </div>
+    <br>
+    <div class="divContactos marginBottom40">
+        <div class="tituloPrincipal">CONTACTOS</div>
+        <div class="divTabla">
+            <table id="registroContactos" class="tblGeneral">
+                <thead>
+                    <tr>
+                        <th><img src="assets/img/icons/star.svg" alt=""></th>
+                        <th>Nombre</th>
+                        <th>Teléfono</th>
+                        <th>Correo Electrónico</th>
+                        <th>Enlace</th>
+                        <th>Eliminar de la lista</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let contacto of datosGeneralesService.contactos">
+                        <td>{{contacto.estrella}}</td>
+                        <td>{{contacto.nombre}}</td>
+                        <td>{{contacto.telefono}}</td>
+                        <td>{{contacto.correo}}</td>
+                        <td>{{contacto.enlace}}</td>
+                        <td><img _ngcontent-npp-c5="" src="assets/img/icons/eliminar.svg"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="botonAgregar"><a href="#"><div></div> Agregar</a></div>
+    </div>
+    <div class="btnCenter">
+        <button mat-button class="botonPrimario">Cancelar</button>
+        <button mat-button class="botonPrimario">Guardar</button>
+    </div>
+</div>

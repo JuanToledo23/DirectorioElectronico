@@ -1,0 +1,38 @@
+<div class="contenedorFuncionario">
+    <div class="tituloPrincipal">RESULTADOS DE BÚSQUEDA</div>
+
+    <div class="divTabla">
+        <!-- <div style="width: 50%;display: flex;justify-content: center;">
+            <div class="filtro">
+                Filtrar por:<br>
+                <mat-select>
+                    <mat-option value="funcionario">Funcionario</mat-option>
+                </mat-select>
+            </div>
+        </div> -->
+        <div style="width: 40%; margin: 0 auto;">
+            <div class="filtro">
+                Filtrar por:<br>
+                <mat-select>
+                    <mat-option value="funcionario">Funcionario</mat-option>
+                </mat-select>
+            </div>
+            <table id="resultados" class="tblPaginador tblGeneral" style="width: 100%;">
+                <thead>
+                    <tr>
+                      <th></th>
+                      <th>Coincidencia</th>
+                      <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let resultadobusqueda of datosGeneralesService.resultadosbusqueda">
+                        <td> <img src="assets/img/icons/funcionario.svg"> {{resultadobusqueda.tipo}}</td>
+                        <td class="txtBlue">{{resultadobusqueda.nombre}}</td>
+                        <td>{{resultadobusqueda.estado}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

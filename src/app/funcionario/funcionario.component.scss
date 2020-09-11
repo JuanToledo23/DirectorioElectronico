@@ -1,0 +1,148 @@
+.nombreFuncionario {
+    display: flex;
+    justify-content: center;
+    font-size: 1.4em;
+    font-family: 'Lato';
+    font-style: italic;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.contenedorFuncionario {
+  padding: 40px 100px;
+  background-color: white;
+}
+
+// *{font-family:"Lato-Regular", sans-serif; color:#3A3A3A;}
+.flex{
+  display: flex;
+  font-family:"Lato-Regular", sans-serif; 
+  padding: 30px 0px 40px 0px;
+}
+.flexCol{display: flex; flex-direction: column;}
+
+.titulo {
+  font:  normal 20px "Lato", sans-serif;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 35px;
+}
+.titulo > .nombre {
+  font: Italic normal 16px "Lato", sans-serif;
+}
+.tarjeta {
+  font: 20px "Lato", sans-serif;
+  text-align: center;
+  padding: 20px 20px 20px 0px;
+  color: #fff;
+}
+.tarjeta > div{
+  color:#ffffff;
+}
+.black {
+    background-color: #29292C;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    margin-top: -5px;
+    color: #fff ;
+    cursor: pointer;
+}
+
+.tarjeta .btn {
+  border:1px solid #979799;
+  padding: 5px;
+  width: 150px;
+  margin:0 auto;
+  border-radius: 2px;
+  color:#fff;
+  display: block;
+  text-decoration: none;
+  font-family: "Lato Latin" !important;
+}
+ .black > div{
+   margin: 10px 0px;
+   color:#fff;
+ }
+ .cv{
+   padding: 20px;
+ }
+
+.cvTitulo {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.cvData{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cvData span{
+  color: #3FBCB6;
+}
+.cvData > div {
+  margin: 10px 0px;
+  font-size: 14px;
+}
+.trayectoria {
+  margin:25px;
+  text-align: initial;
+}
+.trayectoriaItem{
+  position: relative;
+  margin: 30px 20px;
+}
+.trayectoriaItem:before{
+  content: "";
+  background-image: url("../../assets/img/icons/bullet.svg");
+  display: block;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: -25px;
+  top: 3px;
+}
+.trayectoriaItem b{
+  font-family: 'Lato';
+}
+
+.mat-tab-group {
+  padding: unset;
+  margin-bottom: 40px;
+}
+
+.descripcion {
+  text-align: initial;
+  padding: 25px 0px;
+}
+
+.divTabla {
+  background-color: white;
+}
+.verContactos {
+  cursor: pointer;
+}
+
+.contenedorStar {
+  padding: 0px 3px;
+  cursor: pointer;
+}
+
+.contenedorEstrellas {
+  display: flex;
+  justify-content: center;
+  padding: 5px 0px;
+}
+
+.estrellaMarcada {
+  fill: #fed65d;
+}
+
+.fillDecimal {
+  fill: url(#grad1);
+}

@@ -1,0 +1,173 @@
+<div class="divWrapper">
+    <div class="tituloPrincipal">CARGO <br> <span>MINISTRO DE LA SUPREMA CORTE DE JUSTICIA</span></div>
+    <div class="divSwitch">
+        <b [hidden]= "isShow">Cargo activo</b>
+        <mat-slide-toggle
+            class="switchC"
+            [checked]="checked"
+            [disabled]="disabled"
+            (click) = toggleDisplay()
+            >
+            <!-- [color]="color" -->
+        </mat-slide-toggle>
+    </div>
+    <div class="divCargoAccordion">
+        <mat-accordion>
+                <mat-expansion-panel [expanded]= "true">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            1. MINISTRO LUIS FERNANDO HERNÁNDEZ ROMERO
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="divCol2 divInstitucion">
+                        <div class="col2 pRelative">
+                            <div class="divImgFuncionario">
+                                <div class="imgFuncionario">
+                                    <img _ngcontent-iwf-c5="" alt="" src="assets/img/funcionario.png" style="width: 100%;">
+                                </div>
+                                <div class="botonCargar">
+                                    <input type="file" id="inputNuevaImagen" class="carga">
+                                    <label for="inputNuevaImagen"><span>Adjuntat documento</span></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col2">
+                            <div class="eliminarFuncionario"><a href="#"><img src="assets/img/icons/eliminar.svg" alt=""></a></div>
+                            <div class="divCol2">
+                                <div class="col2">
+                                    Cargo<br>
+                                    <input type="text" value="Ministro Presidente de la Suprema Corte de Justicia">
+                                </div>
+                                <div class="col2">
+                                    Titular del cargo<br>
+                                    <input type="text" value="Luis Fernando Hernández Romero">
+                                </div>
+                                <div class="col2 inputT datepickRange">
+                                    Periodo<br>
+                                    <input matInput
+                                        placeholder="Selecciona una fecha"
+                                        [satDatepicker]="picker"
+                                        readonly
+                                    >
+                                    <sat-datepicker #picker 
+                                    [rangeMode]="true"></sat-datepicker>
+                                    <sat-datepicker-toggle matSuffix [for]="picker"></sat-datepicker-toggle>
+                                </div>
+                                <div class="col2">
+                                    Institución<br>
+                                    <mat-select>
+                                        <mat-option value="1">Suprema Corte de Justicia de la Nación</mat-option>
+                                        <mat-option value="2">Opción 2</mat-option>
+                                    </mat-select>
+                                </div>
+                                <div class="col2 inputT">
+                                    Materia<br>
+                                    <div class="divFlexInputs">
+                                        <div *ngFor="let materia of materias" [ngClass]="{'desacCheckBox' : !materia.active}">
+                                            <input type="checkbox" name="grupo1" [id]="materia.id" [(ngModel)]="materia.status"/>
+                                            <label [for]="materia.id" class="check-box"></label>
+                                            <label [for]="materia.id">{{materia.name}}</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col2">
+                                    Domicilio laboral<br>
+                                    <input type="text" value="Pino Suárez Nº 2 Col. Centro, Del. Cuauhtémoc, C.P. 06065, México, Ciudad de México">
+                                </div>
+                                <div class="col2">
+                                    Jefe<br>
+                                    <input type="text" value="Sin Dependencia">
+                                </div>
+                            </div>
+                            <div>
+                                <div>Descripción del cargo</div>
+                                <textarea>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla sapien rutrum, dignissim sapien non, tempus enim. Vivamus luctus molestie lacus, vel congue nisi dapibus at. Nam dictum feugiat nisl id ullamcorper. In finibus nisi in orci blandit accumsan. Vestibulum dictum, libero non congue posuere, neque sapien laoreet urna, nec volutpat turpis tortor interdum arcu. Sed nulla lectus, faucibus vitae pharetra eget, dictum sed odio. Maecenas ipsum sem, efficitur et auctor id, accumsan sed enim. Aliquam erat volutpat.
+                                </textarea>
+                            </div>
+                        </div>
+                    </div>
+                </mat-expansion-panel>
+                <mat-expansion-panel (opened)="true">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            2. MINISTRO JOSÉ RAÚL SALAZAR GUTIÉRREZ
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="divCol2 divInstitucion">
+                        <div class="col2 pRelative">
+                            <div class="divImgFuncionario">
+                                <div class="imgFuncionario">
+                                    <img _ngcontent-iwf-c5="" alt="" src="assets/img/funcionario.png" style="width: 100%;">
+                                </div>
+                                <div class="botonCargar">
+                                    <input type="file" id="inputNuevaImagen" class="carga">
+                                    <label for="inputNuevaImagen"><span>Adjuntat documento</span></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col2">
+                            <div class="eliminarFuncionario"><a href="#"><img src="assets/img/icons/eliminar.svg" alt=""></a></div>
+                            <div class="divCol2">
+                                <div class="col2">
+                                    Cargo<br>
+                                    <input type="text" value="Ministro Presidente de la Suprema Corte de Justicia">
+                                </div>
+                                <div class="col2">
+                                    Titular del cargo<br>
+                                    <input type="text" value="Luis Fernando Hernández Romero">
+                                </div>
+                                <div class="col2 inputT datepickRange">
+                                    Periodo<br>
+                                    <!-- <input matInput
+                                        placeholder="Selecciona una fecha"
+                                        [satDatepicker]="picker"
+                                        readonly
+                                    >
+                                    <sat-datepicker #picker 
+                                    [rangeMode]="true"></sat-datepicker>
+                                    <sat-datepicker-toggle matSuffix [for]="picker"></sat-datepicker-toggle> -->
+                                </div>
+                                <div class="col2">
+                                    Institución<br>
+                                    <mat-select>
+                                        <mat-option value="1">Suprema Corte de Justicia de la Nación</mat-option>
+                                        <mat-option value="2">Opción 2</mat-option>
+                                    </mat-select>
+                                </div>
+                                <div class="col2 inputT">
+                                    Materia<br>
+                                    <div class="divFlexInputs">
+                                        <div *ngFor="let materia of materias" [ngClass]="{'desacCheckBox' : !materia.active}">
+                                            <input type="checkbox" name="grupo1" [id]="materia.id" [(ngModel)]="materia.status"/>
+                                            <label [for]="materia.id" class="check-box"></label>
+                                            <label [for]="materia.id">{{materia.name}}</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col2">
+                                    Domicilio laboral<br>
+                                    <input type="text" value="Pino Suárez Nº 2 Col. Centro, Del. Cuauhtémoc, C.P. 06065, México, Ciudad de México">
+                                </div>
+                                <div class="col2">
+                                    Jefe<br>
+                                    <input type="text" value="Sin Dependencia">
+                                </div>
+                            </div>
+                            <div>
+                                <div>Descripción del cargo</div>
+                                <textarea>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla sapien rutrum, dignissim sapien non, tempus enim. Vivamus luctus molestie lacus, vel congue nisi dapibus at. Nam dictum feugiat nisl id ullamcorper. In finibus nisi in orci blandit accumsan. Vestibulum dictum, libero non congue posuere, neque sapien laoreet urna, nec volutpat turpis tortor interdum arcu. Sed nulla lectus, faucibus vitae pharetra eget, dictum sed odio. Maecenas ipsum sem, efficitur et auctor id, accumsan sed enim. Aliquam erat volutpat.
+                                </textarea>
+                            </div>
+                        </div>
+                    </div>
+                </mat-expansion-panel>
+        </mat-accordion>
+        
+    </div>
+    <div class="botonAgregar marginB60"><a href="#"><div></div> Agregar Funcionario</a></div>
+    <div class="btnCenter">
+        <button mat-button class="botonPrimario">Cancelar</button>
+        <button mat-button (click)="openDialog()" class="botonPrimario">Guardar</button>
+    </div>
+</div>
+

@@ -1,0 +1,306 @@
+<div class="divWrapper">
+    <div class="tituloPrincipal">FUNCIONARIO</div>
+    <div class="divCol3">
+        <div class="col3 pRelative">
+            <div class="divImgFuncionario">
+                <div class="imgFuncionario"></div>
+                <div class="botonCargar">
+                    <input type="file" id="inputNuevaImagen" class="carga">
+                    <label for="inputNuevaImagen"><span>Adjuntat documento</span></label>
+                </div>
+            </div>
+        </div>
+        <div class="col3">
+            <div class="inputT">
+                Nombre(s)<br>
+                <input type="text">
+            </div>
+            <div class="inputT">
+                Cargo<br>
+                <mat-select value='opcion1'>
+                    <mat-option value="opcion1">Opción 1</mat-option>
+                    <mat-option value="opcion2">Opción 2</mat-option>
+                </mat-select>
+            </div>
+            <div class="inputT">
+                Materia<br>
+                <div class="divFlexInputs">
+                    <div *ngFor="let materia of materias" [ngClass]="{'desacCheckBox' : !materia.active}">
+                        <input type="checkbox" name="grupo1" [id]="materia.id" [(ngModel)]="materia.status"/>
+                        <label [for]="materia.id" class="check-box"></label>
+                        <label [for]="materia.id">{{materia.name}}</label>
+                    </div>
+                </div>
+            </div>
+            <div class="inputT">
+                Jefe<br>
+                <input type="text">
+            </div>
+            <div class="inputT">
+                Contacto laboral (móvil)<br>
+                <input type="text">
+            </div>
+        </div>
+        <div class="col3">
+            <div class="inputT">
+                Institución<br>
+                <mat-select value='opcion1'>
+                    <mat-option value="opcion1">Opción 1</mat-option>
+                    <mat-option value="opcion2">Opción 2</mat-option>
+                </mat-select>
+            </div>
+            <div class="inputT datepickRange">
+                Periodo<br>
+                <input matInput
+                    placeholder="Selecciona una fecha"
+                    [satDatepicker]="picker"
+                    readonly
+                >
+                <sat-datepicker #picker 
+                [rangeMode]="true"></sat-datepicker>
+                <sat-datepicker-toggle matSuffix [for]="picker"></sat-datepicker-toggle>
+            </div>
+            <div class="inputT marginB65">
+                Domicilio laboral<br>
+                <input type="text">
+            </div>
+            <div class="inputT">
+                Último grado<br>
+                <input type="text">
+            </div>
+            <div class="inputT">
+                e-mail<br>
+                <input type="text">
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="tituloPrincipal">FUNCIONARIO</div>
+    <div class="w100">
+        <textarea>Abogado egresado de la Escuela Libre de Derecho. Doctor en Derecho por la Universidad Nacional Autónoma de México (UNAM). Durante 25 años fue abogado postulante en materia constitucional y combinó su actividad con la vida académica.Ha sido profesor de derecho constitucional en la Escuela Libre de Derecho, así como profesor a nivel posgrado en la misma institución, de materias relacionadas con el derecho constitucional y el derecho procesal constitucional. También fue profesor titular en las maestrías de derecho procesal constitucional y derecho constitucional y derechos humanos en la Universidad Panamericana. Por oposición, obtuvo la cátedra de derecho constitucional en la UNAM. Actualmente, imparte el Seminario de Análisis de la doctrina jurisprudencial de la Suprema Corte en la Universidad Iberoamericana, campus Santa Fe.
+        </textarea>
+    </div>
+    <br>
+    <div class="divEducacion">
+        <div class="tituloPrincipal">EDUCACIÓN</div>
+        <div class="w100 pRelative editorComentarios">
+            <div class="divListado">
+                <div class="divInformacion">
+                    <div class="titulo">Doctorado en Derecho Público</div>
+                    <div>1987-1990</div>
+                    <div>Universidad de París</div>
+                    <div>Mención honorífica con la tesis: "El nuevo rol del Estado frente al Sector Público. La desincroporación de entidades paraestatales"</div>
+                </div>
+                <div class="iconosEdicion">
+                    <a href="#"><img src="assets/img/icons/editar.svg"></a>
+                    <a href="#"><img src="assets/img/icons/eliminar.svg"></a>
+                </div>
+            </div>
+            <div class="divListado">
+                <div class="divInformacion">
+                    <div class="titulo">Doctorado en Derecho Público</div>
+                    <div>1987-1990</div>
+                    <div>Universidad de París</div>
+                    <div>Mención honorífica con la tesis: "El nuevo rol del Estado frente al Sector Público. La desincroporación de entidades paraestatales"</div>
+                </div>
+                <div class="iconosEdicion">
+                    <a href="#"><img src="assets/img/icons/editar.svg"></a>
+                    <a href="#"><img src="assets/img/icons/eliminar.svg"></a>
+                </div>
+            </div>
+            <div class="divListado">
+                <div class="divInformacion">
+                    <div class="titulo">Doctorado en Derecho Público</div>
+                    <div>1987-1990</div>
+                    <div>Universidad de París</div>
+                    <div>Mención honorífica con la tesis: "El nuevo rol del Estado frente al Sector Público. La desincroporación de entidades paraestatales"</div>
+                </div>
+                <div class="iconosEdicion">
+                    <a href="#"><img src="assets/img/icons/editar.svg"></a>
+                    <a href="#"><img src="assets/img/icons/eliminar.svg"></a>
+                </div>
+            </div>
+            <div class="divListado">
+                <div class="divInformacion">
+                    <div class="titulo">Doctorado en Derecho Público</div>
+                    <div>1987-1990</div>
+                    <div>Universidad de París</div>
+                    <div>Mención honorífica con la tesis: "El nuevo rol del Estado frente al Sector Público. La desincroporación de entidades paraestatales"</div>
+                </div>
+                <div class="iconosEdicion">
+                    <a href="#"><img src="assets/img/icons/editar.svg"></a>
+                    <a href="#"><img src="assets/img/icons/eliminar.svg"></a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="divCol3">
+            <div class="col3">
+                Título<br>
+                <input type="text">
+            </div>
+            <div class="col3 datepickRange">
+                Periodo<br>
+                <input matInput
+                    placeholder="Selecciona una fecha"
+                    [satDatepicker]="picker2"
+                    readonly
+                >
+                <sat-datepicker #picker2 
+                [rangeMode]="true"></sat-datepicker>
+                <sat-datepicker-toggle matSuffix [for]="picker2"></sat-datepicker-toggle>
+            </div>
+            <div class="col3">
+                Institución<br>
+                <mat-select>
+                    <mat-option value="opcion1">Opción 1</mat-option>
+                    <mat-option value="opcion2">Opción 2</mat-option>
+                </mat-select>
+            </div>
+        </div>
+        <div class="w100">
+            Comentarios:<br>
+            <textarea class="comentarios"></textarea>
+        </div>
+        <div class="botonGuardar"><a href="#"><div></div> Guardar</a></div>
+    </div>
+    <br>
+    <div class="divTrayectoria">
+        <div class="tituloPrincipal">TRAYECTORIA PROFESIONAL</div>
+        <div class="w100 editorComentarios">
+            <div class="divListado">
+                <div class="divInformacion">
+                    <div class="titulo">Procurador Fiscal de la Federación</div>
+                    <div>2008-2015</div>
+                    <div>Secretaría de Hacienda y Crédito Público</div>
+                </div>
+                <div class="iconosEdicion">
+                    <a href="#"><img src="assets/img/icons/editar.svg"></a>
+                    <a href="#"><img src="assets/img/icons/eliminar.svg"></a>
+                </div>
+            </div>
+            <div class="divListado">
+                <div class="divInformacion">
+                    <div class="titulo">Procurador Fiscal de la Federación</div>
+                    <div>2008-2015</div>
+                    <div>Secretaría de Hacienda y Crédito Público</div>
+                </div>
+                <div class="iconosEdicion">
+                    <a href="#"><img src="assets/img/icons/editar.svg"></a>
+                    <a href="#"><img src="assets/img/icons/eliminar.svg"></a>
+                </div>
+            </div>
+            <div class="divListado">
+                <div class="divInformacion">
+                    <div class="titulo">Procurador Fiscal de la Federación</div>
+                    <div>2008-2015</div>
+                    <div>Secretaría de Hacienda y Crédito Público</div>
+                </div>
+                <div class="iconosEdicion">
+                    <a href="#"><img src="assets/img/icons/editar.svg"></a>
+                    <a href="#"><img src="assets/img/icons/eliminar.svg"></a>
+                </div>
+            </div>
+            <div class="divListado">
+                <div class="divInformacion">
+                    <div class="titulo">Procurador Fiscal de la Federación</div>
+                    <div>2008-2015</div>
+                    <div>Secretaría de Hacienda y Crédito Público</div>
+                </div>
+                <div class="iconosEdicion">
+                    <a href="#"><img src="assets/img/icons/editar.svg"></a>
+                    <a href="#"><img src="assets/img/icons/eliminar.svg"></a>
+                </div>
+            </div>
+            <div class="divListado">
+                <div class="divInformacion">
+                    <div class="titulo">Procurador Fiscal de la Federación</div>
+                    <div>2008-2015</div>
+                    <div>Secretaría de Hacienda y Crédito Público</div>
+                </div>
+                <div class="iconosEdicion">
+                    <a href="#"><img src="assets/img/icons/editar.svg"></a>
+                    <a href="#"><img src="assets/img/icons/eliminar.svg"></a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="divCol3">
+            <div class="col3">
+                Cargo<br>
+                <input type="text">
+            </div>
+            <div class="col3 datepickRange">
+                Periodo<br>
+                <input matInput
+                    placeholder="Selecciona una fecha"
+                    [satDatepicker]="picker3"
+                    readonly
+                >
+                <sat-datepicker #picker3 
+                [rangeMode]="true"></sat-datepicker>
+                <sat-datepicker-toggle matSuffix [for]="picker3"></sat-datepicker-toggle>
+            </div>
+            <div class="col3">
+                Institución<br>
+                <select>
+                    <option>Opción 1</option>
+                </select>
+            </div>
+        </div>
+        <div class="botonGuardar"><a href="#"><div></div> Guardar</a></div>
+    </div>
+    <br>
+    <div class="divContactos">
+        <div class="tituloPrincipal">CONTACTOS</div>
+        <div class="w100 editorComentarios">
+            <div class="divListado">
+                <div class="divInformacion">
+                    <div class="titulo">Patricia González Becerra</div>
+                    <div>Teléfono: 55 2233 4455</div>
+                    <div>e-mail: correo@dominio.com.mx</div>
+                    <div>Enlace: Arvin Aguilar Villela</div>
+                </div>
+                <div class="iconosEdicion">
+                    <a href="#"><img src="assets/img/icons/eliminar.svg"></a>
+                </div>
+            </div>
+            <div class="divListado">
+                <div class="divInformacion">
+                    <div class="titulo">Patricia González Becerra</div>
+                    <div>Teléfono: 55 2233 4455</div>
+                    <div>e-mail: correo@dominio.com.mx</div>
+                    <div>Enlace: Arvin Aguilar Villela</div>
+                </div>
+                <div class="iconosEdicion">
+                    <a href="#"><img src="assets/img/icons/eliminar.svg"></a>
+                </div>
+            </div>
+            <div class="divListado">
+                <div class="divInformacion">
+                    <div class="titulo">Patricia González Becerra</div>
+                    <div>Teléfono: 55 2233 4455</div>
+                    <div>e-mail: correo@dominio.com.mx</div>
+                    <div>Enlace: Arvin Aguilar Villela</div>
+                </div>
+                <div class="iconosEdicion">
+                    <a href="#"><img src="assets/img/icons/eliminar.svg"></a>
+                </div>
+            </div>
+        </div>
+        <div class="flex">
+            <div style="width: 300px;padding-right: 15px;">
+            Contacto:
+                <div class="pRelative">
+                      <input type="text" id="busca" style="box-sizing: border-box;">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="botonAgregar"><a href="#"><div></div> Agregar</a></div>
+    </div>
+    <div class="btnCenter">
+        <button mat-button class="botonPrimario">Cancelar</button>
+        <button mat-button class="botonPrimario" (click)="guardarCambios()">Guardar</button>
+    </div>
+</div>

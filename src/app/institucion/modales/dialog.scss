@@ -1,0 +1,54 @@
+.tituloModal {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    letter-spacing: 5px;
+    padding: 10px 0px 30px 0px;
+    font-family: "Lato";
+
+}
+
+.modalWrapper {
+    width: 85%;
+    margin: 0 auto;
+}
+.textoModal{
+    font-family: "Lato", sans-serif;
+    margin-bottom: 30px;
+    line-height: 25px;
+    text-align: center;
+}
+.textoModal span {font-weight: 600;}
+.btnCenter {
+    display:flex;
+    justify-content: center;
+}
+.btnCenter .botonPrimario {
+    color: #02A8A0;
+    border:1px solid #02A8A0;
+    text-decoration: none;
+    padding: 15px 4px;
+    width: 182px;
+    max-width: 182px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 12px;
+    border-radius: 0;
+    font-family: "Lato", sans-serif;
+}
+.btnCenter .botonPrimario:first-of-type {
+    margin-right: 20px;
+}
+.botonPrimario:hover {
+    background-color: #02A8A0;
+    color: #ffffff !important;
+}
+
+.radiosRama {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+.radiosRama > mat-radio-button {
+    padding: 20px;
+}

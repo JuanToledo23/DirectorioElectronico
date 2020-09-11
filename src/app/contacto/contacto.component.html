@@ -1,0 +1,70 @@
+<div class="contenedorFuncionario">
+    <div class="tituloPrincipal">CONTACTO</div>
+    <div class="nombreFuncionario">PATRICIA GONZÁLEZ BECERRA</div>
+    <div class="flex">
+        <div class="w30 tarjeta">
+            <div class="black">
+                <div>4.67</div>
+                <div class="starRating">
+                <img src="assets/img/icons/star.svg" alt="">
+                <img src="assets/img/icons/star.svg" alt="">
+                <img src="assets/img/icons/star.svg" alt="">
+                <img src="assets/img/icons/star.svg" alt="">
+                <img src="assets/img/icons/star.svg" alt="">
+                </div>
+                <a href="#" class="btn">Evaluar</a>
+            </div>
+        </div>
+        <div class="w70 cv">
+            <div class="divCol2">
+                <div class="col2">
+                    <span>Nickname</span> <br>
+                    Patylu
+                </div>
+                <div class="col2">
+                    <span>Ciudad de trabajo</span> <br>
+                    Ciudad de México
+                </div>
+                <div class="col2">
+                    <span>Contacto</span> <br>
+                    Móvil: 55-9933-9933 <br>
+                    e-mail: correo@dominio.com.mx
+                </div>
+                <div class="col2">
+                    <span>Persona de enlace (Abogado interno)</span> <br>
+                    Arvin Aguilar Villela
+                </div>
+            </div>
+        </div>
+
+        <div></div>
+    </div>
+</div>
+<div class="funcionarioContacto">
+    <div class="tituloPrincipal">FUNCIONARIOS EN CONTACTO</div>
+    <div class="divTabla">
+        <table id="funcionarios" class="tblGeneral">
+            <thead>
+                <tr>
+                    <th>Funcionario</th>
+                    <th>Cargo</th>
+                    <th>Institución</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let funcionario of datosGeneralesService.funcionarios">
+                    <td>{{funcionario.nombre}}</td>
+                    <td>{{funcionario.cargo}}</td>
+                    <td>{{funcionario.institucion}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</div>
+<div class="contenedorFuncionario">
+    <div class="btnCenter">
+        <button mat-button class="botonPrimario">Regresar</button>
+        <button mat-button routerLink="/editar-contacto" class="botonPrimario">Editar Contacto</button>
+    </div>
+</div>

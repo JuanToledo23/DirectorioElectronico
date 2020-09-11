@@ -1,0 +1,418 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import 'assets/scss/theming';
+@import 'assets/scss/fonts';
+@import 'assets/scss/tabs';
+@import 'assets/scss/forms';
+@import 'assets/scss/paginador';
+// @import 'assets/scss/checkBox';
+@import 'assets/scss/jquery.dataTables.css';
+@import 'assets/scss/select';
+// @import 'assets/scss/tree';
+// @import '~angular-tree-component/dist/angular-tree-component.css';
+@import 'assets/scss/angular-tree-component';
+// Plus imports for other components in your app.
+
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$REQDC7468-primary: mat-palette($mat-indigo);
+$REQDC7468-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$REQDC7468-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$REQDC7468-theme: mat-light-theme($REQDC7468-primary, $REQDC7468-accent, $REQDC7468-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($REQDC7468-theme);
+
+@import '~saturn-datepicker/theming';
+@include sat-datepicker-theme($REQDC7468-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+$checked-color: #000;
+$unchecked-color: #000;
+$checkbox-height: 15px;
+$background-color:#fff;
+$font-color:#efefef;
+$duration: .15s;
+
+
+html, body { 
+    height: 100%;
+    background-color: #dedede;
+    margin: unset !important;
+}
+
+
+// primary font
+$primary_font: 'Lato Latin';
+// font-weight
+$thin:100;
+$light:300;
+$regular:400;
+$bold:700;
+$black:900;
+// Font size
+$font-xs:12px;
+$font-sm: 14px;
+$primary-fs: 16px;
+$font-md: 18px;
+$font-lg: 20px;
+
+body {
+    font-family: $primary_font !important;
+    font-size: $primary-fs;
+    font-weight: $regular;
+}
+
+.tituloPrincipal {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    letter-spacing: 5px;
+    padding: 0px 0px 30px 0px;
+    font-family: 'Lato';
+
+}
+
+.contenedorPrinciapl {
+    width: 100%;
+    min-width: 900px;
+    padding: 45px 0px;
+    background-color: white;
+    height: 100%;
+}
+
+#registro_previous {
+    background-color: black;
+}
+
+#registro_previous > img {
+    width: 9px;
+}
+
+#registro_next {
+    background-color: black;
+}
+
+#registro_next > img {
+    width: 9px;
+    transform: rotate(180deg);
+}
+
+#registro_length {
+    display: none;
+}
+
+#registro_info {
+    display: none;
+}
+
+#registro_filter > label {
+    display: flex;
+    flex-direction: column;
+    text-align: initial;
+}
+#registro_filter > label > input {
+    min-width: 300px !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    color: #fff !important;
+    background-color: #4dc3be !important;
+    border: 1px solid #4dc3be;
+    background: unset;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    border-radius: unset !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    color: white !important;
+    border: 1px solid #1f928d;
+    background-color: #1f928d;
+    background: #1f928d;
+}
+
+// MATERIAL CHIPS
+.mat-chip.mat-standard-chip {
+    background-color: #21201e;
+    color: #fff;
+}
+
+.mat-standard-chip {
+    border-radius: unset !important;
+}
+
+.mat-chip.mat-standard-chip .mat-chip-remove {
+    opacity: unset;
+    width: 13px;
+}
+
+.mat-chip-list-wrapper {
+    padding: 20px 0px 30px 0px;
+}
+
+.mat-standard-chip .mat-chip-remove, .mat-standard-chip .mat-chip-trailing-icon {
+    margin-left: 25px !important;
+}
+
+// DatePickerRange
+
+.datepickRange {
+    position: relative;
+}
+.mat-datepicker-toggle {
+    position: absolute;
+    top: 15px;
+    right: 0px;
+}
+.mat-calendar-body-selected {
+    background-color: #02a8a0 !important;
+    color: #fff;
+}
+.mat-datepicker-toggle-active {
+    color: #02a8a0 !important;
+}
+.mat-calendar-body-selected {
+    background-color: #02a8a0 !important;
+    color: white;
+}
+.mat-calendar-cell-semi-selected {
+    background-color: #5adad4b8 !important;
+}
+.mat-calendar-body-end-range:not(.mat-calendar-body-begin-range) {
+    border-radius: 0 100% 100% 0;
+    background-color: #5adad4b8;
+}
+.mat-calendar-body-begin-range:not(.mat-calendar-body-end-range) {
+    border-radius: 100% 0 0 100%;
+    background-color: #5adad4b8;
+}
+.mat-calendar-cell-over > .mat-calendar-body-cell-content {
+    border: #02a8a0 1px solid;
+}
+
+// Fin DatePickerRange
+
+#resultados_length, #resultados_info, #resultados_filter {
+    display: none;
+}
+/*col3*/
+.col3,
+.divEducacion .w100,
+.divContactos .flex {
+    font-family: "Lato";
+    font-weight: 400;
+}
+/*Checkbox*/
+.divFlexInputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.divFlexInputs  div {
+    width: 50%;
+    margin-bottom: 10px;
+    font-family: 'Lato';
+    font-weight: normal !important;
+}
+.divFlexInputs > div:nth-of-type(3){
+    width: 80%;
+}
+
+/*Botones*/
+.btnCenter {
+    display:flex;
+    justify-content: center;
+}
+.btnCenter .botonPrimario {
+    color: #02A8A0;
+    border:1px solid #02A8A0;
+    text-decoration: none;
+    padding: 15px 4px;
+    width: 182px;
+    max-width: 182px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 12px;
+    border-radius: 0;
+    font-family: "Lato", sans-serif;
+}
+.btnCenter .botonPrimario:first-of-type {
+    margin-right: 20px;
+}
+.botonPrimario:hover {
+    background-color: #02A8A0;
+    color: #ffffff !important;
+}
+
+@-moz-keyframes dothabottomcheck{
+    0% { height: 0; }
+    100% { height: $checkbox-height/2; }
+}
+
+@-webkit-keyframes dothabottomcheck{
+    0% { height: 0; }
+    100% { height: $checkbox-height/2; }
+}
+
+@keyframes dothabottomcheck{
+    0% { height: 0; }
+    100% { height: $checkbox-height/2;  }
+}
+
+@keyframes dothatopcheck{
+    0% { height: 0; }
+    50% { height: 0; }
+    100% { height: $checkbox-height * 1.2; }
+}
+@-webkit-keyframes dothatopcheck{
+    0% { height: 0; }
+    50% { height: 0; }
+    100% { height: $checkbox-height * 1.2; }
+}
+@-moz-keyframes dothatopcheck{
+    0% { height: 0; }
+    50% { height: 0; }
+    100% { height: $checkbox-height * 1.2; }
+}
+
+input[type=checkbox]{
+    display:none;
+}
+
+.check-box {
+    margin: 0px 10px -1.5px 0px;
+    height: $checkbox-height;
+    width: $checkbox-height;
+    background-color: transparent;
+    border: 1px solid $unchecked-color;
+    border-radius: 2px;
+    position: relative;
+    display: inline-block;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-transition: border-color ease $duration/2;
+    -o-transition: border-color ease $duration/2;
+    -webkit-transition: border-color ease $duration/2;
+    transition: border-color ease $duration/2;
+    cursor:pointer;
+
+    &::before, &::after {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        position: absolute;
+        height: 0;
+        width: 1px;
+        background-color: $checked-color;
+        display: inline-block;
+        -moz-transform-origin: left top;
+        -ms-transform-origin: left top;
+        -o-transform-origin: left top;
+        -webkit-transform-origin: left top;
+        transform-origin: left top;
+        // border-radius: 5px;
+        content: ' ';
+        -webkit-transition: opacity ease .5;
+        -moz-transition: opacity ease .5;
+        transition: opacity ease .5;
+    }
+
+    &::before {
+        top:$checkbox-height * .72;
+        left: 6.6px;;
+        // left: $checkbox-height * .41;
+        box-shadow: 0 0 0 $checkbox-height * .05 $background-color;
+        -moz-transform: rotate(-135deg);
+        -ms-transform: rotate(-135deg);
+        -o-transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+        transform: rotate(-135deg);
+    }
+
+    &::after {
+        top: $checkbox-height * .37;
+        left: $checkbox-height * .05;
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+}
+
+input[type=checkbox]:checked + .check-box,
+.check-box.checked{
+    border-color:$checked-color;
+    
+    &::after{
+        height: $checkbox-height * .5;
+        -moz-animation: dothabottomcheck $duration/2 ease 0s forwards;
+        -o-animation: dothabottomcheck $duration/2 ease 0s forwards;
+        -webkit-animation: dothabottomcheck $duration/2 ease 0s forwards;
+        animation: dothabottomcheck $duration/2 ease 0s forwards;
+    }
+     
+    &::before{
+        height: $checkbox-height * 1.2;
+        -moz-animation: dothatopcheck $duration ease 0s forwards;
+        -o-animation: dothatopcheck $duration ease 0s forwards;
+        -webkit-animation: dothatopcheck $duration ease 0s forwards;
+        animation: dothatopcheck $duration ease 0s forwards;
+    }
+}
+
+.desac {
+    color: #000000;
+    cursor: none;
+    pointer-events: none;
+    filter: contrast(180%);
+    -webkit-filter: contrast(60%);
+}
+.desacCheckBox {
+    cursor: none;
+    pointer-events: none;
+    color: #e6e3e3;
+}
+
+.desacCheckBox .check-box {    border: 1px solid #e6e3e3;}
+
+.divTabla {
+    width: 100%;
+}
+
+span.mat-expansion-indicator::after {
+    content: '';
+    background-image: url('/assets/img/icons/flechaAcordeon.svg');
+    background-repeat: no-repeat;
+    background-size: 15px;
+    width: 23px;
+    height: 23px;
+    color: #03a8a0;
+    background-position: center;
+    border-style: none !important;
+    transform: rotate(0deg) !important;
+}
+
+@media screen and (max-width:1005px){
+    .divFlexInputs  div, .divFlexInputs > div:nth-of-type(3) {
+        width: 100%;
+    }
+}

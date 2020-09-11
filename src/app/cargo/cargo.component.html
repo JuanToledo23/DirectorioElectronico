@@ -1,0 +1,138 @@
+<div class="divContenedorCargo">
+    <div class="tituloPrincipal">CARGO</div>
+    <div class="nombreFuncionario">{{cargoActivo.cargo}}</div>
+    <div class="divCargoAccordion">
+        <mat-accordion>
+                <mat-expansion-panel [expanded]= "true">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            1. MINISTRO LUIS FERNANDO HERNÁNDEZ ROMERO
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="flex justifySB">
+                        <div class="tarjeta">
+                            <img src="assets/img/funcionario.png" alt="" class="imgMinistro">
+                            <div class="black">
+                                <div (click)="openModalEvaluacionComentarios()">
+                                    <div>4.67</div>
+                                    <div class="starRating">
+                                        <img src="assets/img/icons/star.svg" alt="">
+                                        <img src="assets/img/icons/star.svg" alt="">
+                                        <img src="assets/img/icons/star.svg" alt="">
+                                        <img src="assets/img/icons/star.svg" alt="">
+                                        <img src="assets/img/icons/star.svg" alt="">
+                                    </div>
+                                </div>
+                                <a class="btn" (click)="openModalEvaluar()">Evaluar</a>
+                            </div>
+                        </div>
+                        <div class="cvData col2">
+                            <div>
+                                <span>Titular del cargo </span><img src="assets/img/icons/ver.svg" alt=""><br>
+                                {{cargoActivo.nombre}}
+                            </div>
+                            <div>
+                                <span>Periodo a cargo</span><br>
+                                02/01/2019 - actualidad
+                            </div>
+                            <div>
+                                <span>Jefe</span><br>
+                                Sin dependencia
+                            </div>
+                            <div>
+                                <span>Institución</span><br>
+                                {{cargoActivo.institucion}}
+                            </div>
+                            <div>
+                                <span>Domicilio de la institución</span><br>
+                                Pino Suárez Nº 2 Col. Centro, Del. Cuauhtémoc, C.P. 06065, México, Ciudad de México
+                            </div>
+                            <div>
+                                <span class="textoAzul">Descripción del cargo</span><br><br>
+                                <div class="textoDescripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla sapien rutrum, dignissim sapien non, tempus enim. Vivamus luctus molestie lacus, vel congue nisi dapibus at. Nam dictum feugiat nisl id ullamcorper. In finibus nisi in orci blandit accumsan. Vestibulum dictum, libero non congue posuere, neque sapien laoreet urna, nec volutpat turpis tortor interdum arcu. Sed nulla lectus, faucibus vitae pharetra eget, dictum sed odio. Maecenas ipsum sem, efficitur et auctor id, accumsan sed enim. Aliquam erat volutpat.</div>
+                            </div>
+                        </div>
+                    </div>
+                </mat-expansion-panel>
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            2. MINISTRO JOSÉ RAÚL SALAZAR GUTIÉRREZ
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="flex justifySB">
+                        <div class="tarjeta">
+                            <img src="assets/img/funcionario.png" alt="" class="imgMinistro">
+                            <div class="black">
+                                <div (click)="openModalEvaluacionComentarios()">
+                                    <div>4.67</div>
+                                    <div class="starRating">
+                                        <img src="assets/img/icons/star.svg" alt="">
+                                        <img src="assets/img/icons/star.svg" alt="">
+                                        <img src="assets/img/icons/star.svg" alt="">
+                                        <img src="assets/img/icons/star.svg" alt="">
+                                        <img src="assets/img/icons/star.svg" alt="">
+                                    </div>
+                                </div>
+                                <a class="btn" (click)="openModalEvaluar()">Evaluar</a>
+                            </div>
+                        </div>
+                        <div class="cvData col2">
+                            <div>
+                                <span>Titular del cargo </span><img src="assets/img/icons/ver.svg" alt=""><br>
+                                {{cargoActivo.nombre}}
+                            </div>
+                            <div>
+                                <span>Periodo a cargo</span><br>
+                                02/01/2019 - actualidad
+                            </div>
+                            <div>
+                                <span>Jefe</span><br>
+                                Sin dependencia
+                            </div>
+                            <div>
+                                <span>Institución</span><br>
+                                {{cargoActivo.institucion}}
+                            </div>
+                            <div>
+                                <span>Domicilio de la institución</span><br>
+                                Pino Suárez Nº 2 Col. Centro, Del. Cuauhtémoc, C.P. 06065, México, Ciudad de México
+                            </div>
+                            <div>
+                                <span class="textoAzul">Descripción del cargo</span><br><br>
+                                <div class="textoDescripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla sapien rutrum, dignissim sapien non, tempus enim. Vivamus luctus molestie lacus, vel congue nisi dapibus at. Nam dictum feugiat nisl id ullamcorper. In finibus nisi in orci blandit accumsan. Vestibulum dictum, libero non congue posuere, neque sapien laoreet urna, nec volutpat turpis tortor interdum arcu. Sed nulla lectus, faucibus vitae pharetra eget, dictum sed odio. Maecenas ipsum sem, efficitur et auctor id, accumsan sed enim. Aliquam erat volutpat.</div>
+                            </div>
+                        </div>
+                    </div>
+                </mat-expansion-panel>
+        </mat-accordion>
+        
+    </div>
+    <div class="historialCargo">
+        <div class="tituloPrincipal">HISTORIAL DE FUNCIONARIOS EN EL CARGO</div>
+        <div class="divTabla">
+            <table id="registroHistorial" class="tblGeneral">
+                <thead>
+                    <tr>
+                        <th>Funcionario</th>
+                        <th>Periodo</th>
+                        <th>Ver perfil</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let historialFuncionario of datosGeneralesService.historialFuncionarios">
+                        <td>{{historialFuncionario.funcionario}}</td>
+                        <td>{{historialFuncionario.periodo}}</td>
+                        <td><a href="#"><img src="assets/img/icons/ver.svg" alt=""></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="btnCenter">
+        <button mat-button class="botonPrimario">Regresar</button>
+        <button mat-button routerLink="/editar-cargo" class="botonPrimario">Editar Cargo</button>
+    </div>
+</div>
+

@@ -1,0 +1,12 @@
+<div class="modalWrapper">
+    <div class="tituloModal">AGREGAR </div>
+    <div class="textoModal">Selecciona el nivel en el cual deseas agregar la nueva institución.</div>
+    <mat-radio-group class="radiosRama">
+        <mat-radio-button value="1">Mismo nivel</mat-radio-button>
+        <mat-radio-button value="2">Siguiente nivel</mat-radio-button>
+    </mat-radio-group>
+    <div class="btnCenter">
+        <button mat-button [mat-dialog-close]="false" class="botonPrimario">Cancelar</button>
+        <button mat-button [mat-dialog-close]="true" class="botonPrimario">Aceptar</button>
+    </div>
+</div>

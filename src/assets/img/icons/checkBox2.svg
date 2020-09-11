@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="13px" viewBox="0 0 16 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>CheckBox2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Directorio-Electrónico" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Filtrar_funcionario" transform="translate(-74.000000, -515.000000)">
+            <g id="CheckBox2" transform="translate(75.000000, 515.000000)">
+                <g id="check" transform="translate(1.000000, 0.000000)" fill="#272624" fill-rule="nonzero">
+                    <path d="M4.84219544,10 C4.70703441,10 4.57174442,9.94686942 4.46895498,9.83994246 L0.154764537,5.38562943 C-0.0515881789,5.17257449 -0.0515881789,4.82715918 0.154764537,4.61410424 C0.361117253,4.4010493 0.695666576,4.4010493 0.902148287,4.61410424 L4.84296928,8.68292098 L13.0979807,0.159791206 C13.3043334,-0.0532637353 13.6388827,-0.0532637353 13.8452355,0.159791206 C14.0515882,0.372846147 14.0515882,0.718394638 13.8452355,0.931449579 L5.21698357,9.83994246 C5.11264646,9.94686942 4.97748543,10 4.84219544,10 Z" id="Path"></path>
+                </g>
+                <path d="M11,2.05484392 L11,1 L0,1 L0,12 L11,12 C11,9.40766418 11,7.44741007 11,6.11923768" id="Path-2" stroke="#272624"></path>
+            </g>
+        </g>
+    </g>
+</svg>

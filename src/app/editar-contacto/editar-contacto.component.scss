@@ -1,0 +1,235 @@
+.nombreFuncionario {
+  display: flex;
+  justify-content: center;
+  font-size: 1.4em;
+  font-family: 'Lato';
+  font-style: italic;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+}
+
+.contenedorFuncionario {
+padding: 40px 100px;
+background-color: white;
+}
+
+// *{font-family:"Lato-Regular", sans-serif; color:#3A3A3A;}
+.flex{
+display: flex;
+font-family:"Lato-Regular", sans-serif;
+flex-wrap: wrap;
+justify-content: space-between;
+box-sizing: border-box;
+}
+.flexCol{display: flex; flex-direction: column;}
+
+.titulo {
+font:  normal 20px "Lato", sans-serif;
+text-align: center;
+letter-spacing: 2px;
+text-transform: uppercase;
+font-size: 16px;
+line-height: 24px;
+margin-bottom: 35px;
+}
+.titulo > .nombre {
+font: Italic normal 16px "Lato", sans-serif;
+}
+.tarjeta {
+font: 20px "Lato", sans-serif;
+text-align: center;
+color: #fff;
+}
+.tarjeta > div{
+color:#ffffff;
+}
+.black {
+  background-color: #29292C;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  color: #fff ;
+}
+.divCol2 .w30 {width: 28%;margin: 10px 1%;}
+.divCol2 .w70 {width: 68%;margin: 10px 1%;}
+.tarjeta .btn {
+border:1px solid #979799;
+padding: 5px;
+width: 150px;
+margin:0 auto;
+border-radius: 2px;
+color:#fff;
+display: block;
+text-decoration: none;
+font-family: "Lato Latin" !important;
+}
+.black > div{
+ margin: 10px 0px;
+ color:#fff;
+}
+
+.cvTitulo {
+font-size: 20px;
+margin-bottom: 20px;
+text-transform: uppercase;
+font-size: 18px;
+}
+.cvData{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+.cv span{
+color: #3FBCB6;
+}
+.cvData > div {
+margin: 10px 0px;
+font-size: 14px;
+}
+.divCol2 {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  font-family: 'Lato', sans-serif;
+}
+.divCol2 .col2 {
+  width: 48%;
+  margin: 10px 1%;
+}
+.funcionarioContacto {
+  width: 100%;
+  padding: 30px 60px 50px 60px;
+  box-sizing: border-box;
+}
+.trayectoria {
+margin:25px;
+text-align: initial;
+}
+.trayectoriaItem{
+position: relative;
+margin: 30px 20px;
+}
+.trayectoriaItem:before{
+content: "";
+background-image: url("/assets/img/icons/bullet.svg");
+display: block;
+width: 15px;
+height: 15px;
+position: absolute;
+left: -25px;
+top: 3px;
+}
+.trayectoriaItem b{
+font-family: 'Lato';
+}
+
+.mat-tab-group {
+padding: unset;
+}
+
+.descripcion {
+text-align: initial;
+padding: 25px 0px;
+}
+
+.divTabla {
+background-color: white;
+padding: 25px;
+}
+
+
+.w100 {
+  width: 100%;
+  padding: 15px 1%;
+  box-sizing: border-box;
+}
+
+.divCol3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.divCol3 .col3 {
+  width: 31%;
+  margin: 10px 1%;
+}
+
+.divCol31 {
+  justify-content: flex-end !important;
+}
+
+.botonAgregar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0px -15px;
+}
+.botonAgregar a {
+  display: flex;
+  flex-wrap: wrap;
+  text-decoration: none;
+  color: #02a8a0;
+}
+.botonAgregar a div {
+  background-image: url("/assets/img/icons/agregar.svg");
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 29px;
+  background-size: 25px;
+  background-position: center 0px;
+  padding-right: 10px;
+}
+
+.divAgregarFuncionario {
+  width: 98%;
+  border: 1px solid #ece7e7;
+  min-height: 200px;
+  color: #000;
+  padding: 10px;
+}
+
+.tblAgregarFuncionario  {
+  width: 98.8%;
+  padding: 10px 0%;
+  margin: 0px auto;
+  border-collapse: collapse;
+}
+.tblAgregarFuncionario  tr th {
+  padding: 5px 10px 6px 10px;
+  color: #333333;
+  text-align: center;
+  font-weight: 100;
+  border-bottom: 2px solid #006341;
+font-size: 14px;font-family: 'AvenirNextLTPro-Medium';min-width: 87px;
+}
+.tblAgregarFuncionario  tr td {
+  padding: 7px 10px 7px 10px;
+  color:#29292C;
+  font-size: 14px;
+  text-align: left;
+  border-bottom: 3px solid #ffffff;
+  font-family: 'Lato', sans-serif;
+}
+.tblAgregarFuncionario  tr:nth-child(odd) td {background-color: #ffffff;}
+.tblAgregarFuncionario  tr:nth-child(even) td {background-color: #f2f2f2;}
+
+img.icoEliminar {
+  width: 19px;
+  display: block;
+  margin: 0 auto;
+}
+
+.divContactoEditar {margin-bottom: 30px;}
+
+@media screen and  (max-width:960px){
+.divCol2 .w30, .divCol2 .w70 {width:98%;}
+.divCol2 .col2 {
+  width: 98%;
+}
+.divCol2 .tarjeta {
+  max-width: 400px;
+  margin: 0 auto;
+}
+}

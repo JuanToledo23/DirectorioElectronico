@@ -1,0 +1,57 @@
+.customTree .mat-icon-button {
+    width: 20px;
+    height: 20px;
+    border: solid 1px;
+    line-height: unset;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.customTree .mat-icon-button .mat-icon, .mat-icon-button i {
+    line-height: unset;
+}
+
+.customTree .mat-tree-node {
+    min-height: 30px;
+    height: 30px;
+    font-size: 15px;
+}
+
+.customTree mat-tree-node[role=treeitem] {
+    overflow: unset;
+}
+
+.customTree mat-tree-node[role=group] {
+    padding-top: 10px;
+}
+
+.customTree mat-tree-node[role=group] > .tituloTree > a{
+    color: #4dc3be !important;
+    text-decoration: unset;
+}
+
+.customTree .line {
+    border-bottom: solid 1px #414141;
+    width: 20px;
+    height: 29px;
+    border-left: solid 1px #414141;
+    margin-left: 0px;
+}
+
+.customTree .textTree {
+    margin-bottom: -26px;
+    padding-left: 10px;
+}
+
+.customTree .material-icons {
+    font-size: 15px;
+}
+
+.customTree .mat-icon {
+    height: 18px;
+    width: 18px;
+}
+
+.customTree .mat-button-ripple-round {
+    border-radius: unset;
+}

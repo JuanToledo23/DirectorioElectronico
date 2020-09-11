@@ -1,0 +1,18 @@
+<div class="background">
+    <img src="assets/img/icons/logo.svg" class="logo">
+
+    <div class="inputs">
+        <div>
+            Usuario<br>
+            <input type="text">
+        </div>
+        <div style="padding-top: 45px;">
+            Contraseña<br>
+            <input type="text">
+        </div>
+        <div class="forgotPass">
+            <label>¿Olvidaste tu contraseña?</label>
+        </div>
+        <button mat-button class="loginButton" [routerLink]="['/filtrar']" (click)="showHeader()">Ingresar</button>
+    </div>
+</div>

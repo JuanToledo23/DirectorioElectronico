@@ -1,0 +1,72 @@
+.divWrapper {
+    width: 100% !important;
+    background-color: white;
+    padding: 40px 100px;
+    box-sizing: border-box;
+}
+.tituloPrincipal span {
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+.divCol2 > .w30 {
+    width: 28%;
+    margin: 15px 1%;
+}
+.divCol2 > .w70 {
+    width: 68%;
+    margin: 15px 1%;
+}
+.divGrow > .col2 {
+  width: 48%;
+  margin: 15px 0%;
+}
+
+.divCol2 {
+    display:flex;
+    align-items: center;
+}
+.ImagenInstitucion {
+    display:flex; 
+    justify-content: center;
+}
+.infoInstitucion {margin-bottom: 10px;}
+.infoInstitucion span {
+    color: #02A8A0;
+    font-family: 'Avenir';
+}
+
+.tabsInstitucion .mat-tab-group {padding: 0;}
+.divTabla {
+    margin: 20px 0px;
+}
+.textoDescripcion {
+    text-align: left;
+    margin-bottom: 80px;
+}
+
+.textCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.textBuscar {
+    width: 300px;
+    z-index: 999; 
+    font-family: 'Lato'; 
+    text-align: initial;
+}
+
+@media screen and (max-width:1023px) {
+    .divCol2 {display: block;}
+    .divCol2 .w30, .divCol2 .w70 {width: 98%;}
+    .divCol2 .w70 {margin-bottom: 80px;}
+}

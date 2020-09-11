@@ -1,0 +1,88 @@
+<div class="divWrapper">
+    <div class="tituloPrincipal">NUEVA INSTITUCIÓN</div>
+    <div class="divCol2 divInstitucion">
+        <div class="col2 pRelative">
+            <div class="divImgFuncionario">
+                <div class="imgFuncionario"></div>
+                <div class="divCargarImagen">
+                    <div class="botonCargar"><a href="#"><img src="assets/img/icons/subirFoto.svg"></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="col2">
+        <div class="divCol2">
+            <div class="col2">
+                Nombre de la Institución<br>
+                <input type="text">
+            </div>
+            <div class="col2">
+                Institución Padre<br>
+                <input type="text">
+            </div>
+            <div class="col2">
+                Materia<br>
+                <div class="divFlexInputs">
+                    <div *ngFor="let materia of materias">
+                        <input type="checkbox" name="grupo1" [id]="materia.id" [(ngModel)]="materia.status"/>
+                        <label [for]="materia.id" class="check-box"></label>
+                        <label [for]="materia.id">{{materia.name}}</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col2">
+                Domicilio de la Institución<br>
+                <input type="text">
+            </div>
+        </div>
+        </div>
+    </div>
+    <br>
+    <div class="tituloPrincipal">DATOS DE LA INSTITUCIÓN</div>
+    <div class="divCol3">
+        <div class="col3">
+            <div class="inputT">
+                País<br>
+                <input type="text">
+            </div>
+        </div>
+        <div class="col3">
+            <div class="inputT">
+                Estado<br>
+                <input type="text">
+            </div>
+        </div>
+        <div class="col3">
+            <div class="inputT">
+                Municipio/Delegación<br>
+                <input type="text">
+            </div>
+        </div>
+        <div class="col3">
+            <div class="inputT">
+                Nivel de Gobierno<br>
+                <mat-select value='opcion1'>
+                    <mat-option value="opcion1">Opción 1</mat-option>
+                    <mat-option value="opcion2">Opción 2</mat-option>
+                </mat-select>
+            </div>
+        </div>
+        <div class="col3">
+            <div class="inputT">
+                Poder<br>
+                <mat-select value='opcion1'>
+                    <mat-option value="opcion1">Opción 1</mat-option>
+                    <mat-option value="opcion2">Opción 2</mat-option>
+                </mat-select>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="tituloPrincipal">DESCRIPCIÓN</div>
+    <div class="w100 marginBottom40">
+        <textarea></textarea>
+    </div>
+    <div class="btnCenter">
+        <button mat-button class="botonPrimario">Cancelar</button>
+        <button mat-button class="botonPrimario">Guardar</button>
+    </div>
+</div>

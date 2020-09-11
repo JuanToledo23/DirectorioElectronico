@@ -1,0 +1,92 @@
+.hoverMap {
+    cursor: pointer;
+}
+
+.svgs {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.filtrarDirectorio {
+    width: 100%;
+    // min-width: 900px;
+    padding: 45px 0px 20px 0px;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.34);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.34);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.34);
+}
+
+.mapMexico .hoverMap:hover {
+    fill: #4dc3be;
+    opacity: (0.5);
+}
+
+.contenedorFiltrado {
+    padding: 30px 70px 0px 70px;
+    font-family: 'Lato';
+
+}
+
+.divTabla {
+    background-color: white;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.divFuncionario {
+    display: flex;
+}
+
+.divChecks {
+    min-width: 250px;
+    text-align: initial;
+    padding: 15px 0px 0px 25px;
+}
+
+.divMapa {
+    width: 60%;
+    padding: 15px 0px 0px 0px;
+    margin: 0 auto;
+    max-width: 715px;
+}
+
+.categoria {
+    color: #4dc3be;
+    padding: 18px 0px 10px 0px;
+}
+
+.mat-tab-group {
+    font-family: 'Lato';
+}
+
+.divChecks > div:not(.categoria) {
+    padding: 4px 0px;
+    white-space: nowrap;
+    
+}
+
+.divChecks label {
+    cursor: pointer !important; 
+}
+
+
+.flex {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.textCenter {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.noLink {
+    text-decoration: none !important;
+}
+
+.estadoActivo {
+    fill: #4dc3be !important;
+}

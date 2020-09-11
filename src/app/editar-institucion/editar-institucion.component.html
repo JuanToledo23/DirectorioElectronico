@@ -1,0 +1,104 @@
+<div class="divWrapper pRelative">
+    <div class="tituloPrincipal">INSTITUCIÓN <br> <span>SUPREMA CORTE DE JUSTICIA DE LA NACIÓN</span></div>
+    <div class="divSwitch divAbsolute">
+        <b [hidden]= "isShow">Institución activa</b>
+        <mat-slide-toggle
+            class="switchC"
+            [checked]="checked"
+            [disabled]="disabled"
+            (click) = toggleDisplay()
+            >
+            <!-- [color]="color" -->
+        </mat-slide-toggle>
+    </div>
+    <div class="divCol2 divInstitucion">
+        <div class="col2 pRelative">
+            <div class="divImgFuncionario">
+                <div class="imgFuncionario">
+                    <img _ngcontent-iwf-c5="" alt="" src="assets/img/funcionario.png" style="width: 100%;">
+                </div>
+                <div class="botonCargar">
+                    <input type="file" id="inputNuevaImagen" class="carga">
+                    <label for="inputNuevaImagen"><span>Adjuntat documento</span></label>
+                </div>
+            </div>
+        </div>
+        <div class="col2">
+            <div class="divCol2">
+                <div class="col2">
+                    Nombre de la Institución<br>
+                    <input type="text">
+                </div>
+                <div class="col2">
+                    Institución Padre<br>
+                    <input type="text">
+                </div>
+                <div class="col2">
+                    Materia<br>
+                    <div class="divFlexInputs">
+                        <div *ngFor="let materia of materias">
+                            <input type="checkbox" name="grupo1" [id]="materia.id" [(ngModel)]="materia.status"/>
+                            <label [for]="materia.id" class="check-box"></label>
+                            <label [for]="materia.id">{{materia.name}}</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col2">
+                    Domicilio de la Institución<br>
+                    <input type="text">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tituloPrincipal">DATOS DE LA INSTITUCIÓN</div>
+    <div class="divCol3 divDatosInstitucion">
+        <div class="col3">
+            <div class="inputT">
+                País<br>
+                <input type="text">
+            </div>
+        </div>
+        <div class="col3">
+            <div class="inputT">
+                Estado<br>
+                <input type="text">
+            </div>
+        </div>
+        <div class="col3">
+            <div class="inputT">
+                Municipio/Delegación<br>
+                <input type="text">
+            </div>
+        </div>
+        <div class="col3">
+            <div class="inputT">
+                Nivel de Gobierno<br>
+                <mat-select value='opcion1'>
+                    <mat-option value="opcion1">Opción 1</mat-option>
+                    <mat-option value="opcion2">Opción 2</mat-option>
+                </mat-select>
+            </div>
+        </div>
+        <div class="col3">
+            <div class="inputT">
+                Poder<br>
+                <mat-select value='opcion1'>
+                    <mat-option value="opcion1">Opción 1</mat-option>
+                    <mat-option value="opcion2">Opción 2</mat-option>
+                </mat-select>
+            </div>
+        </div>
+    </div>
+    <div class="tituloPrincipal">DESCRIPCIÓN</div>
+    <div class="textoDescripcion">
+        La Suprema Corte de Justicia de la Nación es el Máximo Tribunal Constitucional del país y cabeza del Poder Judicial de la Federación. Tiene entre sus responsabilidades defender el orden establecido por la Constitución Política de los Estados Unidos Mexicanos; mantener el equilibrio entre los distintos Poderes y ámbitos de gobierno, a través de las resoluciones judiciales que emite; además de solucionar, de manera definitiva, asuntos que son de gran importancia para la sociedad. En esa virtud, y toda vez que imparte justicia en el más alto nivel, es decir, el constitucional, no existe en nuestro país autoridad que se encuentre por encima de ella o recurso legal que pueda ejercerse en contra de sus resoluciones.
+        <br><br>
+        El edificio sede de la Suprema Corte de Justicia de la Nación se encuentra ubicado en Avenida Pino Suárez número 2, Colonia Centro Histórico, Delegación Cuauhtémoc, C.P. 06065, en la Ciudad de México.
+        <br><br>
+        Sin embargo, en el año de 2002, se determinó establecer como sede alterna para el desarrollo de las sesiones del Alto Tribunal, el edificio ubicado en Avenida Revolución número 1508, Colonia Guadalupe Inn, Delegación Álvaro Obregón, C.P. 01020, en la Ciudad de México.
+    </div>
+    <div class="btnCenter">
+        <button mat-button class="botonPrimario">Regresar</button>
+        <button mat-button routerLink="/editarInstitucion" class="botonPrimario">Editar Institución</button>
+    </div>
+</div>

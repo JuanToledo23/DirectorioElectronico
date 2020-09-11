@@ -1,0 +1,183 @@
+<div class="filtrarDirectorio">
+
+    <div class="tituloPrincipal"><img src="assets/img/icons/buscar.svg">FILTRAR EN EL DIRECTORIO</div>
+
+    <mat-tab-group (selectedTabChange)="tabChanged($event)">
+        <mat-tab label="Funcionario">
+            <div class="divFuncionario">
+                <div class="divChecks">
+
+                    <div class="categoria">Nivel de gobierno</div>
+                    <div *ngFor="let nivel of nivelGobierno">
+                        <input type="checkbox" name="grupo1" id="check{{nivel.name}}" [(ngModel)]="nivel.status"
+                            (change)="insertarCriterioBusqueda(nivel, $event.target.checked)" />
+                        <label for="check{{nivel.name}}" class="check-box"></label>
+                        <label for="check{{nivel.name}}">{{nivel.name}}</label>
+                    </div>
+
+                    <div class="categoria">Poder</div>
+                    <div *ngFor="let pode of poder">
+                        <input type="checkbox" name="grupo1" id="check{{pode.name}}" [(ngModel)]="pode.status"
+                            (change)="insertarCriterioBusqueda(pode, $event.target.checked)" />
+                        <label for="check{{pode.name}}" class="check-box"></label>
+                        <label for="check{{pode.name}}">{{pode.name}}</label>
+                    </div>
+
+                    <div class="categoria">Materia</div>
+                    <div *ngFor="let mat of materia">
+                        <input type="checkbox" name="grupo1" id="check{{mat.name}}" [(ngModel)]="mat.status"
+                            (change)="insertarCriterioBusqueda(mat, $event.target.checked)" />
+                        <label for="check{{mat.name}}" class="check-box"></label>
+                        <label for="check{{mat.name}}">{{mat.name}}</label>
+                    </div>
+                </div>
+                <div class="divMapa">
+                    <div class="categoria" style="text-align: initial;padding-left: 20px;">Estado</div>
+                    <div class="svgs">
+
+                        <svg xmlns:mapsvg="http://mapsvg.com" xmlns:dc="http://purl.org/dc/elements/1.1/"
+                            xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                            xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 800 500">
+
+                            <path *ngFor="let estado of estados" class="hoverMap" [attr.fill]="estado.fill"
+                                (click)="validarEstado($event)" [ngClass]="{'estadoActivo': estado.status}"
+                                [attr.d]="estado.d" [title]="estado.name" [id]="estado.id" [attr.status]="estado.status"
+                                (click)="insertarCriterioBusqueda(estado, estado.status)" />
+                            <g *ngFor="let estado of estados; let i = index" transform="scale(2)">
+                                <path *ngIf="i === 8 || i === 16 || i === 14 || i === 28 || i === 12 || i === 21"
+                                    [attr.fill]="estado.fill" (click)="validarEstado($event)" [attr.d]="estado.d2"
+                                    [title]="estado.name" [id]="estado.id" [ngClass]="{'estadoActivo': estado.status}"
+                                    (click)="insertarCriterioBusqueda(estado, estado.status)" class="hoverMap mapita" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </mat-tab>
+        <mat-tab label="Institución">
+            <div class="divFuncionario">
+                <div class="divChecks">
+
+                    <div class="categoria">Nivel de gobierno</div>
+                    <div *ngFor="let nivel of nivelGobierno">
+                        <input type="checkbox" name="grupo1" id="check{{nivel.name}}" [(ngModel)]="nivel.status"
+                            (change)="insertarCriterioBusqueda(nivel, $event.target.checked)" />
+                        <label for="check{{nivel.name}}" class="check-box"></label>
+                        <label for="check{{nivel.name}}">{{nivel.name}}</label>
+                    </div>
+
+                    <div class="categoria">Poder</div>
+                    <div *ngFor="let pode of poder">
+                        <input type="checkbox" name="grupo1" id="check{{pode.name}}" [(ngModel)]="pode.status"
+                            (change)="insertarCriterioBusqueda(pode, $event.target.checked)" />
+                        <label for="check{{pode.name}}" class="check-box"></label>
+                        <label for="check{{pode.name}}">{{pode.name}}</label>
+                    </div>
+
+                    <div class="categoria">Materia</div>
+                    <div *ngFor="let mat of materia">
+                        <input type="checkbox" name="grupo1" id="check{{mat.name}}" [(ngModel)]="mat.status"
+                            (change)="insertarCriterioBusqueda(mat, $event.target.checked)" />
+                        <label for="check{{mat.name}}" class="check-box"></label>
+                        <label for="check{{mat.name}}">{{mat.name}}</label>
+                    </div>
+                </div>
+                <div class="divMapa">
+                    <div class="categoria" style="text-align: initial;padding-left: 20px;">Estado</div>
+                    <div class="svgs">
+
+                        <svg xmlns:mapsvg="http://mapsvg.com" xmlns:dc="http://purl.org/dc/elements/1.1/"
+                            xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                            xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 800 500">
+
+                            <path *ngFor="let estado of estados" class="hoverMap" [attr.fill]="estado.fill"
+                                (click)="validarEstado($event)" [ngClass]="{'estadoActivo': estado.status}"
+                                [attr.d]="estado.d" [title]="estado.name" [id]="estado.id" [attr.status]="estado.status"
+                                (click)="insertarCriterioBusqueda(estado, estado.status)" />
+                            <g *ngFor="let estado of estados; let i = index" transform="scale(2)">
+                                <path *ngIf="i === 8 || i === 16 || i === 14 || i === 28 || i === 12 || i === 21"
+                                    [attr.fill]="estado.fill" (click)="validarEstado($event)" [attr.d]="estado.d2"
+                                    [title]="estado.name" [id]="estado.id" [ngClass]="{'estadoActivo': estado.status}"
+                                    (click)="insertarCriterioBusqueda(estado, estado.status)" class="hoverMap mapita" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+</div>
+
+<div class="contenedorFiltrado" *ngIf="contentShowTab">
+    <div class="tituloPrincipal">FUNCIONARIOS</div>
+
+    <mat-chip-list #chipList>
+        <mat-chip *ngFor="let criterio of criteriosBusquedaChips" [removable]="removable" (removed)="remove(criterio)">
+            {{criterio}}
+            <img src="assets/img/icons/delete.svg" matChipRemove *ngIf="removable">
+        </mat-chip>
+    </mat-chip-list>
+
+    <div class="divTabla">
+        <table id="registro" class="tblPaginador tblGeneral">
+            <thead>
+                <tr>
+                    <th>Funcionario</th>
+                    <th>Cargo</th>
+                    <th>Institución</th>
+                    <th>Nivel de gobierno</th>
+                    <th>Poder</th>
+                    <th>Materia</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let funcionario of datosGeneralesService.funcionarios">
+                    <td>
+                        <a [routerLink]="['/funcionario', funcionario.id]" class="noLink">{{funcionario.nombre}}
+                            {{funcionario.apellidos}}</a><br>
+                        <a [routerLink]="['/funcionario', funcionario.id]" class="noLink">{{funcionario.nombre}}
+                            {{funcionario.apellidos}}</a>
+                    </td>
+                    <td><a [routerLink]="['/cargo', funcionario.id]" class="noLink">{{funcionario.cargo}}</a></td>
+                    <td>{{funcionario.institucion}}</td>
+                    <td>{{funcionario.nivelGobierno}}</td>
+                    <td>{{funcionario.poder}}</td>
+                    <td>{{funcionario.materia}}</td>
+                    <td>{{funcionario.estado}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="contenedorFiltrado" *ngIf="!contentShowTab">
+    <div class="tituloPrincipal">INSTITUCIONES</div>
+
+    <mat-chip-list #chipList>
+        <mat-chip *ngFor="let criterio of criteriosBusquedaChips" [removable]="removable" (removed)="remove(criterio)">
+            {{criterio}}
+            <img src="assets/img/icons/delete.svg" matChipRemove *ngIf="removable">
+        </mat-chip>
+    </mat-chip-list>
+
+    <div class="divTabla">
+        <div class="flex">
+            <div style="width: 300px;z-index: 999;">
+                Buscar:
+                <div class="pRelative">
+                    <input type="text" style="box-sizing: border-box;" [(ngModel)]="filter" (keyup)="filterTree()">
+                </div>
+            </div>
+        </div>
+        <div class="tree" style="position: relative;top: -25px;">
+            <tree-root #tree [nodes]="nodes" [options]="options" (activate)="onEvent($event)">
+                <ng-template #treeNodeTemplate let-node let-index="index">
+                    <div class="textCenter">{{ node.data.name }}</div>
+                </ng-template>
+            </tree-root>
+        </div>
+    </div>
+</div>

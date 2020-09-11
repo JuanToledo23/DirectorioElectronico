@@ -1,0 +1,126 @@
+.tituloModal {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    letter-spacing: 5px;
+    padding: 10px 0px 30px 0px;
+    font-family: "Lato";
+
+}
+
+.modalWrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+.textoModal{
+    font-family: "Lato", sans-serif;
+    margin-bottom: 80px;
+    line-height: 25px;
+    text-align: center;
+}
+.textoModal span {font-weight: 600;}
+.btnCenter {
+    display:flex;
+    justify-content: center;
+}
+.btnCenter .botonPrimario {
+    color: #02A8A0;
+    border:1px solid #02A8A0;
+    text-decoration: none;
+    padding: 15px 4px;
+    width: 182px;
+    max-width: 182px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 12px;
+    border-radius: 0;
+    font-family: "Lato", sans-serif;
+}
+.btnCenter .botonPrimario:first-of-type {
+    margin-right: 20px;
+}
+.botonPrimario:hover {
+    background-color: #02A8A0;
+    color: #ffffff !important;
+}
+
+.btnCerrar {
+    display: flex;
+    justify-content: flex-end;
+    // margin-right: -45px;
+    // margin-top: -10px;
+    cursor: pointer;
+}
+
+.starTittle {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Lato';
+    padding-bottom: 20px;
+}
+.starTittle img {
+    width: 30px;
+    padding: 0px 3px;
+}
+
+.contenidoComentarios {
+    width: 92%;
+    height: 500px;
+    background-color: #fbfbfb;
+    padding: 25px;
+    overflow-y: auto;
+
+}
+
+.tittleBlue {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 9px;
+}
+
+.tittleBlue div:nth-child(1) {
+    color: #02A8A0;
+}
+
+.black {
+    padding-bottom: 9px;
+}
+
+.boxComentario {
+    padding: 15px 0px;
+}
+
+.contenedorStar {
+    padding: 0px 3px;
+    cursor: pointer;
+}
+
+.evaluacionEstrellas {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.evaluacionEstrellas .star:hover, .evaluacionEstrellas .selected .star {
+    fill: #fed65d;
+  }
+  
+.star {
+    stroke: #fed65d;
+    stroke-width: 0.8px;
+    fill: none;
+}
+.star2 {
+    stroke: #fed65d;
+    stroke-width: 0.8px;
+}
+
+.estrellaMarcada {
+    fill: #fed65d;
+}
+
+.fillDecimal {
+    fill: url(#grad1);
+}

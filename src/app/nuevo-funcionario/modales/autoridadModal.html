@@ -1,0 +1,78 @@
+<div>
+    <div class="tituloModal">AUTORIDAD</div>
+    <div class="modal-contenido">
+        <div class="forModalAutoridad">
+            <div class="divCol3">
+                <div class="col3">
+                    <div class="inputT">
+                        Nombre de la autoridad<br>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="col3">
+                    País<br>
+                    <mat-select value='opcion1'>
+                        <mat-option value="opcion1">Opción 1</mat-option>
+                        <mat-option value="opcion2">Opción 2</mat-option>
+                    </mat-select>
+                </div>
+                <div class="col3">
+                    Estado<br>
+                    <mat-select value='opcion1'>
+                        <mat-option value="opcion1">Opción 1</mat-option>
+                        <mat-option value="opcion2">Opción 2</mat-option>
+                    </mat-select>
+                </div>
+            </div>
+            <div class="divCol3">
+                <div class="col3">
+                    País<br>
+                    <mat-select value='opcion1'>
+                        <mat-option value="opcion1">Opción 1</mat-option>
+                        <mat-option value="opcion2">Opción 2</mat-option>
+                    </mat-select>
+                </div>
+                <div class="col3">
+                    País<br>
+                    <mat-select value='opcion1'>
+                        <mat-option value="opcion1">Opción 1</mat-option>
+                        <mat-option value="opcion2">Opción 2</mat-option>
+                    </mat-select>
+                </div>
+                <div class="col3">
+                    <div class="divFlexInputs">
+                        <div *ngFor="let materia of materias">
+                            <input type="checkbox" name="grupo1" [id]="materia.id" [(ngModel)]="materia.status"/>
+                            <label [for]="materia.id" class="check-box"></label>
+                            <label [for]="materia.id">{{materia.name}}</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="btnCenter">
+                <button mat-button class="botonPrimario">Buscar</button>
+            </div>
+        </div>
+        <div class="contBusquedaAutoridad">
+            <div class="divTabla">
+                <table id="busquedaAutoridad" class="tblGeneral">
+                    <thead>
+                        <tr>
+                            <th>Autoridad</th>
+                            <th>Municipio/Delegación</th>
+                            <th>Materia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div class="btnCenter">
+                <button mat-button class="botonPrimario">Cancelar</button>
+                <button mat-button class="botonPrimario">Guardar</button>
+            </div>
+        </div>
+    </div>
+    
+</div>

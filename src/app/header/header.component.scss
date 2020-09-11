@@ -1,0 +1,70 @@
+.example-icon {
+    padding: 0 14px;
+}
+  
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.contenedorHeader {
+    display: flex;
+    box-sizing: border-box;
+    padding: 0px 15px;
+    background-color: #28282c;
+}
+
+.header {
+    color: white;
+}
+
+.logo {
+    width: 270px;
+}
+
+.linkRoot {
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    z-index: 99;
+}
+
+.spaceLetter > button{
+    letter-spacing: 1px;
+}
+
+.user {
+    font-size: 16px;
+}
+
+.logOut {
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.row1 {
+    height: 55px;
+}
+
+.row2 {
+    padding: unset;
+    height: 40px;
+}
+
+.buttonActive {
+    background-color: #191919;
+}
+
+.mat-toolbar {
+    background: unset !important;
+}
+
+@media screen and (max-width:900px){
+    // .mat-button {
+    //     padding: 0 6px;
+    // }
+    .linkRoot {
+        height: 65px;
+    }
+}
