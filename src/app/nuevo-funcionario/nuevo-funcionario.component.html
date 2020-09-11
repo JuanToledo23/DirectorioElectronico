@@ -23,7 +23,7 @@
             </div>
             <div class="inputT">
                 Autoridad<br>
-                <input type="text">
+                <input type="text" (click)="openModalAutoridad()">
             </div>
             <div class="inputT">
                 Jefe<br>
@@ -79,14 +79,14 @@
             <div class="inputT datepickRange">
                 Inicio de cargo<br>
                 
-                <input matInput
+                <!-- <input matInput
                     placeholder="Selecciona una fecha"
                     [satDatepicker]="picker"
                     readonly
                     >
                 <sat-datepicker #picker 
                 [rangeMode]="true"></sat-datepicker>
-                <sat-datepicker-toggle matSuffix [for]="picker"></sat-datepicker-toggle>
+                <sat-datepicker-toggle matSuffix [for]="picker"></sat-datepicker-toggle> -->
             </div>
         </div>
     </div>
@@ -123,7 +123,7 @@
                 <sat-datepicker-toggle matSuffix [for]="picker1"></sat-datepicker-toggle>
             </div>
             <div class="col3">
-                Institución<br>
+                Autoridad<br>
                 <select>
                     <option>Opción 1</option>
                 </select>
