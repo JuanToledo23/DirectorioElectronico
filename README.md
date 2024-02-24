@@ -1,4 +1,8 @@
-# REQDC7468
+# Directorio Electrónico
+
+## Maquetado directorio electronico interactivo para el area de juridico de Grupo Salinas
+
+Utilizar version de [NodeJS 15.14.0](https://nodejs.org/dist/v15.14.0/)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
 
